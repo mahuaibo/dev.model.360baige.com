@@ -29,3 +29,4 @@ type UserPosition struct {
 	AccessToken string `db:"access_token" json:"access_token"` // 访问令牌
 	ExpireIn int64 `db:"expire_in" json:"expire_in"` // 访问时效
 }
+
