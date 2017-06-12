@@ -7,8 +7,8 @@ import (
 
 type Application struct {
 	ID               int64 `db:"id" json:"id"`                                   // 主键
-	CreateTime       int `db:"create_time" json:"create_time"`                   // 创建时间
-	UpdateTime       int `db:"update_time" json:"update_time"`                   // 更新时间
+	CreateTime       int64 `db:"create_time" json:"create_time"`                   // 创建时间
+	UpdateTime       int64 `db:"update_time" json:"update_time"`                   // 更新时间
 	CompanyID        int64 `db:"company_id" json:"company_id"`                   // 所属公司ID
 	UserID           int64 `db:"user_id" json:"user_id"`                         // 购买者ID
 	ApplicationTplID float64 `db:"application_tpl_id" json:"application_tpl_id"` // 应用ID
@@ -19,8 +19,8 @@ type Application struct {
 
 type ApplicationTpl struct {
 	ID         int64 `db:"id" json:"id"`                 // 主键
-	CreateTime int `db:"ctime" json:"ctime"`             // 创建时间
-	UpdateTime int `db:"utime" json:"utime"`             // 更新时间
+	CreateTime int64 `db:"create_time" json:"create_time"` // 创建时间
+	UpdateTime int64 `db:"update_time" json:"update_time"` // 更新时间
 	CompanyID  int64 `db:"company_id" json:"company_id"` // 开发公司ID
 	UserID     int64 `db:"user_id" json:"user_id"`       // 开发者ID
 	Name       string `db:"name" json:"name"`            // 名称
@@ -31,4 +31,3 @@ type ApplicationTpl struct {
 	Status     int8 `db:"status" json:"status"`          // 状态
 	Price      float64 `db:"price" json:"price"`         // 价格
 }
-

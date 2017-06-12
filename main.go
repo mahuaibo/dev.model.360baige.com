@@ -2,6 +2,7 @@ package main
 
 import (
 	_ "dev.model.360baige.com/routers"
+	_ "dev.model.360baige.com/rpc/server"
 
 	"github.com/astaxie/beego"
 )
