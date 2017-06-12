@@ -1,5 +1,10 @@
 package models
 
+import (
+	_ "github.com/go-sql-driver/mysql"
+	"github.com/astaxie/beego/orm"
+)
+
 type Person struct {
 	ID        int64 `db:"id" json:"id"`                 // 主键
 	CreateTime     int64 `db:"ctime" json:"ctime"`           // 创建时间（毫秒）

@@ -1,6 +1,9 @@
 package models
 
-import "github.com/astaxie/beego/orm"
+import (
+	_ "github.com/go-sql-driver/mysql"
+	"github.com/astaxie/beego/orm"
+)
 
 func init() {
 	orm.RegisterDriver("mysql", orm.DRMySQL)

@@ -1,5 +1,10 @@
 package models
 
+import (
+	_ "github.com/go-sql-driver/mysql"
+	"github.com/astaxie/beego/orm"
+)
+
 type Machine struct {
 	ID         int64 `db:"id" json:"id"`                 // 主键
 	CreateTime int64 `db:"create_time" json:"ctime"`           // 创建时间（毫秒）

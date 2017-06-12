@@ -1,5 +1,10 @@
 package models
 
+import (
+	_ "github.com/go-sql-driver/mysql"
+	"github.com/astaxie/beego/orm"
+)
+
 type Card struct {
 	ID         int64 `db:"id" json:"id"`                // 主键自动增长id
 	CreateTime int `db:"ctime" json:"ctime"`            // 创建时间
