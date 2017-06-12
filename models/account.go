@@ -22,8 +22,8 @@ type Account struct {
 
 type AccountItem struct {
 	ID            int64 `db:"id" json:"id"`                         // 主键自动增长id
-	CreateTime    int `db:"create_time" json:"create_time"`         // 创建时间
-	UpdateTime    int `db:"update_time" json:"update_time"`         // 更新时间
+	CreateTime    int64 `db:"create_time" json:"create_time"`         // 创建时间
+	UpdateTime    int64 `db:"update_time" json:"update_time"`         // 更新时间
 	TransactionID int64 `db:"transaction_id" json:"transaction_id"` // 交易id
 	AccountID     int64 `db:"account_id" json:"account_id"`         // 账户id
 	Amount        float64 `db:"amount" json:"amount"`               // 交易金额
