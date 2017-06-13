@@ -3,6 +3,7 @@ package main
 import (
 	_ "dev.model.360baige.com/rpc/server"
 	"github.com/astaxie/beego"
+	"github.com/astaxie/beego/orm"
 )
 
 func main() {

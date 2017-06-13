@@ -13,10 +13,10 @@ func init() {
 }
 
 type Account struct {
-	ID         int64 `db:"id" json:"id"`                   // 主键
+	Id         int64 `db:"id" json:"id"`                   // 主键
 	CreateTime int64 `db:"create_time" json:"create_time"` // 创建时间
 	UpdateTime int64 `db:"update_time" json:"update_time"` // 更新时间
-	UserID     int64 `db:"user_id" json:"user_id"`         // 所有者id
+	UserId     int64 `db:"user_id" json:"user_id"`         // 所有者id
 	Type       int8 `db:"type" json:"type"`                // 类型:1.余额；2.积分;
 	Unit       int8 `db:"unit" json:"unit"`                // 单元:1.分；2.元
 	Balance    float64 `db:"balance" json:"balance"`       // 余额
@@ -24,22 +24,22 @@ type Account struct {
 }
 
 type AccountItem struct {
-	ID            int64 `db:"id" json:"id"`                         // 主键自动增长id
+	Id            int64 `db:"id" json:"id"`                         // 主键自动增长id
 	CreateTime    int64 `db:"create_time" json:"create_time"`         // 创建时间
 	UpdateTime    int64 `db:"update_time" json:"update_time"`         // 更新时间
-	TransactionID int64 `db:"transaction_id" json:"transaction_id"` // 交易id
-	AccountID     int64 `db:"account_id" json:"account_id"`         // 账户id
+	TransactionId int64 `db:"transaction_id" json:"transaction_id"` // 交易id
+	AccountId     int64 `db:"account_id" json:"account_id"`         // 账户id
 	Amount        float64 `db:"amount" json:"amount"`               // 交易金额
 	Balance       float64 `db:"balance" json:"balance"`             // 平账
 	Remark        string `db:"remark" json:"remark"`                // 备注
 }
 
 type Transaction struct {
-	ID            int64 `db:"id" json:"id"`                           // 主键
+	Id            int64 `db:"id" json:"id"`                           // 主键
 	CreateTime    int64 `db:"create_time" json:"create_time"`         // 创建时间
 	UpdateTime    int64 `db:"update_time" json:"update_time"`         // 更新时间
-	FromAccountID int64 `db:"from_account_id" json:"from_account_id"` // 交易人id
-	ToAccountID   int64 `db:"to_account_id" json:"to_account_id"`     // 收款人id
+	FromAccountId int64 `db:"from_account_id" json:"from_account_id"` // 交易人id
+	ToAccountId   int64 `db:"to_account_id" json:"to_account_id"`     // 收款人id
 	Amount        float64 `db:"amount" json:"amount"`                 // 交易金额
 	OrderCode     string `db:"order_code" json:"order_code"`          // 订单编码
 	Remark        string `db:"remark" json:"remark"`                  // 备注

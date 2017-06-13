@@ -6,7 +6,7 @@ import (
 )
 
 type Company struct {
-	ID         int64 `db:"id" json:"id"`                   // 主键自动增长id
+	Id         int64 `db:"id" json:"id"`                   // 主键自动增长id
 	CreateTime int64 `db:"create_time" json:"create_time"` // 创建时间
 	UpdateTime int64 `db:"update_time" json:"update_time"` // 更新时间
 	Type       int8 `db:"type" json:"type"`                // 类型：10：幼儿园 11：小学 12:中学 13：高中 20：运营  30：代理商 31：经销商
@@ -15,9 +15,9 @@ type Company struct {
 	Name       string `db:"name" json:"name"`              // 企业全名
 	ShortName  string `db:"short_name" json:"short_name"`  // 企业简称（微信端显示使用）
 	SubDomain  string `db:"sub_domain" json:"sub_domain"`  // 企业子域名（自动分配，微信设置使用）
-	ProvinceID int64 `db:"province_id" json:"province_id"` // 省
-	CityID     int64 `db:"city_id" json:"city_id"`         // 市
-	DistrictID int64 `db:"district_id" json:"district_id"` // 县
+	ProvinceId int64 `db:"province_id" json:"province_id"` // 省
+	CityId     int64 `db:"city_id" json:"city_id"`         // 市
+	DistrictId int64 `db:"district_id" json:"district_id"` // 县
 	Address    string `db:"address" json:"address"`        // 企业地址
 	PositionX  float64 `db:"position_x" json:"position_x"` // x
 	PositionY  float64 `db:"position_y" json:"position_y"` // y
@@ -29,7 +29,7 @@ type Company struct {
 func init() {
 	orm.RegisterDriver("mysql", orm.DRMySQL)
 	orm.Debug = true
-	orm.RegisterDataBase("default", "mysql", "demo2015:baige.2016@tcp(182.92.163.192:3306)/db_company?charset=utf8", 30)
+	orm.RegisterDataBase("company", "mysql", "demo2015:baige.2016@tcp(182.92.163.192:3306)/db_company?charset=utf8", 30)
 	orm.RegisterModel(&Company{})
 }
 
