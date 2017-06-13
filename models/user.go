@@ -94,19 +94,19 @@ func (*User) UpdateUserById(args *User, reply *User) error {
 }
 
 // 删除
-func (*User) Delete(args *User, reply *User) error {
-	o := orm.NewOrm()
-	o.Using("user")
-	num, err := o.Delete(args)
-	if err == nil {
-		if num > 0 {
-			reply.Id = args.Id
-		} else {
-			return errors.New("没有找到相关信息")
-		}
-	}
-	return err
-}
+//func (*User) Delete(args *User, reply *User) error {
+//	o := orm.NewOrm()
+//	o.Using("user")
+//	num, err := o.Delete(args)
+//	if err == nil {
+//		if num > 0 {
+//			reply.Id = args.Id
+//		} else {
+//			return errors.New("没有找到相关信息")
+//		}
+//	}
+//	return err
+//}
 
 /**
  * UserPosition
