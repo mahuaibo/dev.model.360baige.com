@@ -4,21 +4,12 @@ import (
 	"dev.model.360baige.com/models"
 	"github.com/smallnest/rpcx/plugin"
 	"github.com/rcrowley/go-metrics"
-	"github.com/astaxie/beego/logs"
 	"github.com/smallnest/rpcx"
 	"github.com/astaxie/beego"
 	"time"
 )
 
 func init() {
-	log := logs.NewLogger()
-	log.SetLogger(logs.AdapterConsole)
-	log.Debug("rpc run start")
-	go run()
-	log.Debug("rpc run end")
-}
-
-func run() {
 	// 服务
 	services := map[string]interface{}{
 		"Account": &models.Account{},
