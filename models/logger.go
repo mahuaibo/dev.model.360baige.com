@@ -2,7 +2,7 @@ package models
 
 import (
 	_ "github.com/go-sql-driver/mysql"
-	"github.com/astaxie/beego/orm"
+	//"github.com/astaxie/beego/orm"
 )
 
 type Logger struct {
