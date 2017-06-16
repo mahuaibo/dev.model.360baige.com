@@ -3,7 +3,6 @@ package models
 import (
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/astaxie/beego/orm"
-	"github.com/pkg/errors"
 )
 
 func init() {
@@ -40,7 +39,7 @@ type UserPosition struct {
 }
 
 /**
- * User
+ * ******* User
  */
 // 新增
 func (*User) AddUser(args *User, reply *User) error {
@@ -63,7 +62,7 @@ func (*User) AddUser(args *User, reply *User) error {
 }
 
 // 查询 by Id
-func (*User) FindUserById(args *User, reply *User) error {
+func (*User) FindById(args *User, reply *User) error {
 	o := orm.NewOrm()
 	o.Using("user")
 	reply.Id = args.Id
@@ -72,7 +71,7 @@ func (*User) FindUserById(args *User, reply *User) error {
 }
 
 // 查询 by Username
-func (*User) FindUserByUsername(args *User, reply *User) error {
+func (*User) FindByUsername(args *User, reply *User) error {
 	o := orm.NewOrm()
 	o.Using("user")
 	reply.Username = args.Username
@@ -80,8 +79,8 @@ func (*User) FindUserByUsername(args *User, reply *User) error {
 	return err
 }
 
-// 查询 by Id
-func (*User) UpdateUserById(args *User, reply *User) error {
+// 更新 by Id
+func (*User) UpdateById(args *User, reply *User) error {
 	o := orm.NewOrm()
 	o.Using("user")
 	num, err := o.Update(args)
@@ -93,26 +92,11 @@ func (*User) UpdateUserById(args *User, reply *User) error {
 	return err
 }
 
-// 删除
-//func (*User) Delete(args *User, reply *User) error {
-//	o := orm.NewOrm()
-//	o.Using("user")
-//	num, err := o.Delete(args)
-//	if err == nil {
-//		if num > 0 {
-//			reply.Id = args.Id
-//		} else {
-//			return errors.New("没有找到相关信息")
-//		}
-//	}
-//	return err
-//}
-
 /**
- * UserPosition
+ * ******* UserPosition
  */
-//
-func (*UserPosition) FindUserPositionById(args *UserPosition, reply *UserPosition) error {
+// 新增
+func (*UserPosition) FindById(args *UserPosition, reply *UserPosition) error {
 	o := orm.NewOrm()
 	o.Using("user")
 	reply.Id = args.Id
@@ -120,7 +104,7 @@ func (*UserPosition) FindUserPositionById(args *UserPosition, reply *UserPositio
 	return err
 }
 
-func (*UserPosition) FindUserPositionByUserId(args *UserPosition, reply *UserPosition) error {
+func (*UserPosition) FindByUserId(args *UserPosition, reply *UserPosition) error {
 	o := orm.NewOrm()
 	o.Using("user")
 	reply.UserId = args.UserId
