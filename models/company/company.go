@@ -1,9 +1,4 @@
-package models
-
-import (
-	_ "github.com/go-sql-driver/mysql"
-	"github.com/astaxie/beego/orm"
-)
+package company
 
 type Company struct {
 	Id         int64 `db:"id" json:"id"`                   // 主键自动增长id
@@ -24,43 +19,4 @@ type Company struct {
 	Status     int8 `db:"status" json:"status"`            // 1 启用 0 停用
 	Remark     string `db:"remark" json:"remark"`          // 备注
 	Brief      string `db:"brief" json:"brief"`            // 简介
-}
-
-func init() {
-	orm.RegisterDriver("mysql", orm.DRMySQL)
-	orm.Debug = true
-	orm.RegisterDataBase("company", "mysql", "demo2015:baige.2016@tcp(182.92.163.192:3306)/db_company?charset=utf8", 30)
-	orm.RegisterModel(&Company{})
-}
-
-func (Company) ToString() {
-
-}
-
-func (Company) Add() {
-
-}
-
-func (Company) AddAll() {
-
-}
-
-func (Company) Count() {
-
-}
-
-func (Company) Get() {
-
-}
-
-func (Company) GetAll() {
-
-}
-
-func (Company) Modify() {
-
-}
-
-func (Company) Delete() {
-
 }
