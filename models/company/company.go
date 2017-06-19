@@ -20,3 +20,7 @@ type Company struct {
 	Remark     string `db:"remark" json:"remark"`          // 备注
 	Brief      string `db:"brief" json:"brief"`            // 简介
 }
+
+const (
+	CompanyStatusNormal = 1
+)

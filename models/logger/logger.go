@@ -9,3 +9,12 @@ type Logger struct {
 	Content    string `db:"content" json:"content"`        // 内容(修改前后变化)
 	Type       int `db:"type" json:"type"`                 // 类别（增、删、改、查）
 }
+
+// Logger 日志信息
+const (
+	LoggerTypeAdd    = 1
+	LoggerTypeUpdate = 2
+	LoggerTypeDelete = 3
+	LoggerTypeFind   = 4
+	LoggerTypeOther  = 5
+)
