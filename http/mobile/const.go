@@ -1,4 +1,4 @@
-package window
+package mobile
 
 // Response 状态码
 const (

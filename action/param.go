@@ -4,7 +4,6 @@ type Num struct {
 	Value int64
 }
 
-
 type DeleteByIdCond struct {
 	Value []int64
 }
@@ -35,11 +34,9 @@ type FindByCond struct {
 	Fileds   []string
 }
 
-
 type DeleteByCond struct {
 	CondList []CondValue // 更新条件
 }
-
 
 type ListByCond struct {
 	CondList []CondValue
@@ -48,12 +45,11 @@ type ListByCond struct {
 	PageSize int64 //每页数量
 }
 
-
 type PageByCond struct {
 	CondList    []CondValue
 	Cols        []string
 	OrderBy     []string
-	List        []interface{}
+	Json        []byte
 	Total       int64 //总数
 	PageSize    int64 //每页数量
 	Current     int64 //当前页码

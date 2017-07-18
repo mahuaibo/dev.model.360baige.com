@@ -34,7 +34,7 @@ type AccountItemListPaginator struct {
 }
 type AccountItemListValue struct {
 	Id         int64 `db:"id" json:"id"`                    // 主键自动增长id
-	CreateTime string `db:"create_time" json:"create_time"`  // 创建时间
+	CreateTime int64 `db:"create_time" json:"create_time"`  // 创建时间
 	Amount     float64 `db:"amount" json:"amount"`          // 交易金额
 	AmountType string `db:"amount_type" json:"amount_type"` // 交易金额类型
 }
