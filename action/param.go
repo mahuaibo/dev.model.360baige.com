@@ -55,3 +55,7 @@ type PageByCond struct {
 	Current     int64 //当前页码
 	CurrentSize int64 //当前页数量
 }
+
+type CountByCond struct {
+	CondList []CondValue // 更新条件
+}
