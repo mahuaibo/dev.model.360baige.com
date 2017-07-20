@@ -16,6 +16,7 @@ type UserLogin struct {
 	ExpireIn     int64 `db:"expire_in" json:"expire_in"`          // 访问时效
 }
 type UserDetail struct {
+	Id       int64`db:"id" json:"id"`               // 主键
 	Username string `db:"username" json:"username"` // 用户名
 	Email    string `db:"email" json:"email"`       // 邮件
 	Phone    string `db:"phone" json:"phone"`       // 手机号
