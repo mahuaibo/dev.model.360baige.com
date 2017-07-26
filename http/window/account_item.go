@@ -1,7 +1,9 @@
 package window
+
 import (
 	"dev.model.360baige.com/models/account"
 )
+
 type AccountItemStatisticsCond struct {
 	AccountId int64 `db:"account_id" json:"account_id"` // 账户id
 	StartTime int64 `db:"start_time" json:"start_time"` // 开始时间
@@ -34,7 +36,7 @@ type AccountItemListPaginator struct {
 }
 type AccountItemListValue struct {
 	Id         int64 `db:"id" json:"id"`                    // 主键自动增长id
-	CreateTime string `db:"create_time" json:"create_time"`  // 创建时间
+	CreateTime string `db:"create_time" json:"create_time"` // 创建时间
 	Amount     float64 `db:"amount" json:"amount"`          // 交易金额
 	AmountType string `db:"amount_type" json:"amount_type"` // 交易金额类型
 }
@@ -46,11 +48,11 @@ type AccountItemDetailResponse struct {
 }
 
 type AccountItemDetail struct {
-	CreateTime string `db:"create_time" json:"create_time"`  // 创建时间
-	ToAccount   string `db:"to_account" json:"to_account"`     // 收款人公司
-	OrderCode     string `db:"order_code" json:"order_code"`          // 订单编码
-	Amount        float64 `db:"amount" json:"amount"`               // 交易金额
+	CreateTime string `db:"create_time" json:"create_time"` // 创建时间
+	ToAccount  string `db:"to_account" json:"to_account"`   // 收款人公司
+	OrderCode  string `db:"order_code" json:"order_code"`   // 订单编码
+	Amount     float64 `db:"amount" json:"amount"`          // 交易金额
 	AmountType string `db:"amount_type" json:"amount_type"` // 交易金额类型
-	Balance       float64 `db:"balance" json:"balance"`             // 平账
-	Remark        string `db:"remark" json:"remark"`                // 备注
+	Balance    float64 `db:"balance" json:"balance"`        // 平账
+	Remark     string `db:"remark" json:"remark"`           // 备注
 }
