@@ -1,14 +1,16 @@
 package window
+
 import (
 	"dev.model.360baige.com/models/logger"
 )
+
 type LoggerAddResponse struct {
 	Code    string `json:"code"`
 	Messgae string        `json:"messgae"`
 	Data    LoggerAdd   `json:"data,omitempty"`
 }
 type LoggerAdd struct {
-	Id  int64 `db:"id" json:"id"`   //ap id
+	Id int64 `db:"id" json:"id"` //ap id
 }
 type LoggerListResponse struct {
 	Code    string `json:"code"`
@@ -37,11 +39,11 @@ type LoggerListPaginator struct {
 	Name        string //搜索名称
 }
 type LoggerValue struct {
-	CreateTime string `db:"create_time" json:"create_time"` // 创建时间ap
-	//CompanyName string `db:"company_name" json:"company_name"` // 企业ID
-	//UserName string `db:"user_name" json:"user_name"` // 操作者ID
-	//UserPosition string `db:"user_position_id" json:"user_position_id"` // 操作者ID
-	Content string `db:"content" json:"content"` // 内容(修改前后变化)
-	Remark string `db:"remark" json:"remark"` // 描述
-	Type string `db:"type" json:"type"` // 类别（1增、2删、3改、4查）
+	CreateTime string `json:"create_time"` // 创建时间ap
+					       //CompanyName string `json:"company_name"` // 企业ID
+					       //UserName string `json:"user_name"` // 操作者ID
+					       //UserPosition string `json:"user_position_id"` // 操作者ID
+	Content    string `json:"content"`     // 内容(修改前后变化)
+	Remark     string `json:"remark"`      // 描述
+	Type       string `json:"type"`        // 类别（1增、2删、3改、4查）
 }

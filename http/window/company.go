@@ -10,19 +10,19 @@ type CompanyDetailResponse struct {
 	Data    CompanyDetail   `json:"data,omitempty"`
 }
 type CompanyDetail struct {
-	Id         int64 `db:"id" json:"id"`                   // 企业Id
-	Logo       string `db:"logo" json:"logo"`              // 企业LOGO
-	Name       string `db:"name" json:"name"`              // 企业全名
-	ShortName  string `db:"short_name" json:"short_name"`  // 企业简称（微信端显示使用）
-	ProvinceId int64 `db:"province_id" json:"province_id"` // 省
-	CityId     int64 `db:"city_id" json:"city_id"`         // 市
-	DistrictId int64 `db:"district_id" json:"district_id"` // 县
-	Address    string `db:"address" json:"address"`        // 企业地址
-	PositionX  float64 `db:"position_x" json:"position_x"` // x
-	PositionY  float64 `db:"position_y" json:"position_y"` // y
-	Remark     string `db:"remark" json:"remark"`          // 备注
-	Brief      string `db:"brief" json:"brief"`            // 简介
-	Status     int8 `db:"status" json:"status"`            // 1 启用 0 停用
+	Id         int64 `json:"id"`           // 企业Id
+	Logo       string `json:"logo"`        // 企业LOGO
+	Name       string `json:"name"`        // 企业全名
+	ShortName  string `json:"short_name"`  // 企业简称（微信端显示使用）
+	ProvinceId int64 `json:"province_id"`  // 省
+	CityId     int64 `json:"city_id"`      // 市
+	DistrictId int64 `json:"district_id"`  // 县
+	Address    string `json:"address"`     // 企业地址
+	PositionX  float64 `json:"position_x"` // x
+	PositionY  float64 `json:"position_y"` // y
+	Remark     string `json:"remark"`      // 备注
+	Brief      string `json:"brief"`       // 简介
+	Status     int8 `json:"status"`        // 1 启用 0 停用
 }
 type CompanyModifyResponse struct {
 	Code    string `json:"code"`

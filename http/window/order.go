@@ -29,14 +29,14 @@ type OrderListPaginator struct {
 	CurrentSize int64 //当前页数量
 }
 type OrderValue struct {
-	Id         int64 `db:"id" json:"id"`                    // 主键自动增长id
-	CreateTime string `db:"create_time" json:"create_time"` // 创建时间
-	Code       string `db:"code" json:"code"`               // 订单编号
-	Price      float64 `db:"price" json:"price"`            // 单价
-	Type       int8 `db:"type" json:"type"`                 // 订单类型
-	PayType    string `db:"pay_type" json:"pay_type"`       // 支付方式 1在线支付   2线下支付
-	Brief      string `db:"brief" json:"brief"`             // 详情
-	Status     string `db:"status" json:"status"`           // 订单状态：0:撤回 1：待审核  2：已通过 3：未通过 4：发货中 5：完成
+	Id         int64 `json:"id"`           // 主键自动增长id
+	CreateTime string `json:"create_time"` // 创建时间
+	Code       string `json:"code"`        // 订单编号
+	Price      float64 `json:"price"`      // 单价
+	Type       int8 `json:"type"`          // 订单类型
+	PayType    string `json:"pay_type"`    // 支付方式 1在线支付   2线下支付
+	Brief      string `json:"brief"`       // 详情
+	Status     string `json:"status"`      // 订单状态：0:撤回 1：待审核  2：已通过 3：未通过 4：发货中 5：完成
 }
 
 type OrderDetailResponse struct {
@@ -46,11 +46,11 @@ type OrderDetailResponse struct {
 }
 
 type OrderDetail struct {
-	CreateTime string `db:"create_time" json:"create_time"` // 创建时间
-	Code       string `db:"code" json:"code"`               // 订单编号
-	Price      float64 `db:"price" json:"price"`            // 单价
-	Type       int8 `db:"type" json:"type"`                 // 订单类型
-	PayType    string `db:"pay_type" json:"pay_type"`       // 支付方式 1在线支付   2线下支付
-	Brief      string `db:"brief" json:"brief"`             // 详情
-	Status     string  `db:"status" json:"status"`          // 订单状态：0:撤回 1：待审核  2：已通过 3：未通过 4：发货中 5：完成
+	CreateTime string `json:"create_time"` // 创建时间
+	Code       string `json:"code"`        // 订单编号
+	Price      float64 `json:"price"`      // 单价
+	Type       int8 `json:"type"`          // 订单类型
+	PayType    string `json:"pay_type"`    // 支付方式 1在线支付   2线下支付
+	Brief      string `json:"brief"`       // 详情
+	Status     string  `json:"status"`     // 订单状态：0:撤回 1：待审核  2：已通过 3：未通过 4：发货中 5：完成
 }

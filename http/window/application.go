@@ -56,19 +56,19 @@ type ApplicationTplListPaginator struct {
 	Name        string //搜索名称
 }
 type ApplicationValue struct {
-	Id         int64 `db:"id" json:"id"`                    // 主键自动增长id apid
-	CreateTime string `db:"create_time" json:"create_time"` // 创建时间ap
-	Name       string `db:"name" json:"name"`               // 名称ap is null tpl
-	Image      string `db:"image" json:"image"`             // 图片链接ap is null tpl
-	Status     string `db:"status" json:"status"`           // 状态 0 启用 1停用ap
-	Site       string `db:"site" json:"site"`               // 访问链接tpl
+	Id         int64 `json:"id"`           // 主键自动增长id apid
+	CreateTime string `json:"create_time"` // 创建时间ap
+	Name       string `json:"name"`        // 名称ap is null tpl
+	Image      string `json:"image"`       // 图片链接ap is null tpl
+	Status     int8 `json:"status"`        // 状态 0 启用 1停用
+	Site       string `json:"site"`        // 访问链接tpl
 }
 type ApplicationTplValue struct {
-	Id                 int64 `db:"id" json:"id"`        // 主键自动增长id aptplid
-	Name               string `db:"name" json:"name"`   // 名称tpl
-	Image              string `db:"image" json:"image"` // 图片链接tpl
-	Desc               string `db:"desc" json:"desc"`   // 简介tpl
-	SubscriptionStatus int8 `db:"status" json:"status"` // 状态 0 未订阅 1 已订阅
+	Id                 int64 `json:"id"`     // 主键自动增长id aptplid
+	Name               string `json:"name"`  // 名称tpl
+	Image              string `json:"image"` // 图片链接tpl
+	Desc               string `json:"desc"`  // 简介tpl
+	SubscriptionStatus int8 `json:"status"`  // 状态 0 未订阅 1 已订阅
 }
 type ApplicationDetailResponse struct {
 	Code    string `json:"code"`
@@ -77,15 +77,15 @@ type ApplicationDetailResponse struct {
 }
 
 type ApplicationDetail struct {
-	CreateTime  string `db:"create_time" json:"create_time"`   // 创建时间ap
-	Name        string `db:"name" json:"name"`                 // 名称ap is null tpl
-	Image       string `db:"image" json:"image"`               // 图片链接ap is null tpl
-	Desc        string `db:"desc" json:"desc"`                 // 简介tpl
-	Price       float64 `db:"price" json:"price"`              // 价格 tpl
-	PayType     string `db:"pay_type" json:"pay_type"`         // 0:限免 1:永久免费 2:1次性收费 3:周期收费tpl
-	PayCycle    string `db:"pay_cycle" json:"pay_cycle"`       // 0无1月2季3半年4年tpl
-	CompanyName string `db:"company_name" json:"company_name"` // 开发公司ID tpl
-	UserName    string `db:"user_name" json:"user_name"`       // 开发者ID tpl
+	CreateTime  string `json:"create_time"`  // 创建时间ap
+	Name        string `json:"name"`         // 名称ap is null tpl
+	Image       string `json:"image"`        // 图片链接ap is null tpl
+	Desc        string `json:"desc"`         // 简介tpl
+	Price       float64 `json:"price"`       // 价格 tpl
+	PayType     string `json:"pay_type"`     // 0:限免 1:永久免费 2:1次性收费 3:周期收费tpl
+	PayCycle    string `json:"pay_cycle"`    // 0无1月2季3半年4年tpl
+	CompanyName string `json:"company_name"` // 开发公司ID tpl
+	UserName    string `json:"user_name"`    // 开发者ID tpl
 }
 type ModifyApplicationStatusResponse struct {
 	Code    string `json:"code"`
@@ -98,6 +98,6 @@ type ModifyApplicationTplStatusResponse struct {
 }
 
 type ApplicationTplStatus struct {
-	AppId  int64 `db:"app_id" json:"app_id"`   //ap id
-	ApplicationTplId int64 `db:"application_tpl_id" json:"application_tpl_id"` // 应用ID
+	AppId            int64 `json:"app_id"`             //ap id
+	ApplicationTplId int64 `json:"application_tpl_id"` // 应用ID
 }
