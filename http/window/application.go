@@ -84,6 +84,7 @@ type ApplicationDetail struct {
 	Price       float64 `json:"price"`       // 价格 tpl
 	PayType     string `json:"pay_type"`     // 0:限免 1:永久免费 2:1次性收费 3:周期收费tpl
 	PayCycle    string `json:"pay_cycle"`    // 0无1月2季3半年4年tpl
+	Site        string`json:"site"`          // 访问链接
 	CompanyName string `json:"company_name"` // 开发公司ID tpl
 	UserName    string `json:"user_name"`    // 开发者ID tpl
 }
