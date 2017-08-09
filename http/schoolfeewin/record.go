@@ -6,6 +6,12 @@ type ListOfRecordResponse struct {
 	Data    ListOfRecord   `json:"data,omitempty"`
 }
 
+type ClassListOfRecordResponse struct {
+	Code    string `json:"code"`
+	Messgae string        `json:"messgae"`
+	Data    []map[string]string   `json:"data,omitempty"`
+}
+
 type ListOfRecord struct {
 	List []Record
 }
