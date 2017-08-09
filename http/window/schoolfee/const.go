@@ -1,4 +1,4 @@
-package schoolfeewin
+package schoolfee
 
 // Response 状态码
 const (

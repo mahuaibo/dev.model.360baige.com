@@ -1,4 +1,4 @@
-package mobile
+package center
 
 type LoggerAddResponse struct {
 	Code    string `json:"code"`

@@ -1,4 +1,4 @@
-package mobile
+package center
 
 type AccountItemStatisticsCond struct {
 	AccountId int64 `db:"account_id" json:"account_id"` // 账户id

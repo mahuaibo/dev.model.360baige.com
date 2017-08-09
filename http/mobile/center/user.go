@@ -1,4 +1,4 @@
-package mobile
+package center
 
 type UserLoginResponse struct {
 	Code    string `json:"code"`

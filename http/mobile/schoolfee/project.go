@@ -1,4 +1,4 @@
-package schoolfeeapp
+package schoolfee
 
 type ListOfNoLimitProjectResponse struct {
 	Code    string `json:"code"`

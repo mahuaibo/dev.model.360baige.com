@@ -1,4 +1,4 @@
-package mobile
+package center
 
 type UserPositionResponse struct {
 	Code    string `json:"code"`

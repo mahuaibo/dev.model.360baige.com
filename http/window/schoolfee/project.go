@@ -1,4 +1,4 @@
-package schoolfeewin
+package schoolfee
 
 type ListOfProjectResponse struct {
 	Code    string `json:"code"`

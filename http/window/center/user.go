@@ -1,4 +1,4 @@
-package window
+package center
 
 type UserLoginResponse struct {
 	Code    string `json:"code"`

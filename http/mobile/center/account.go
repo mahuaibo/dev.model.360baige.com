@@ -1,4 +1,4 @@
-package mobile
+package center
 
 type AccountStatisticsResponse struct {
 	Code    string `json:"code"`

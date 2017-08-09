@@ -1,4 +1,4 @@
-package mobile
+package center
 
 type OrderListResponse struct {
 	Code    string `json:"code"`

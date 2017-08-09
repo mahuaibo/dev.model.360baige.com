@@ -1,4 +1,4 @@
-package mobile
+package schoolfee
 
 // Response 状态码
 const (

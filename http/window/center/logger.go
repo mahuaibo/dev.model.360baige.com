@@ -1,4 +1,4 @@
-package window
+package center
 
 import (
 	"dev.model.360baige.com/models/logger"

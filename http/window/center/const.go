@@ -1,4 +1,4 @@
-package schoolfeeapp
+package center
 
 // Response 状态码
 const (

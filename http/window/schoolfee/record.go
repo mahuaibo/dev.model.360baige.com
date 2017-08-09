@@ -1,4 +1,4 @@
-package schoolfeewin
+package schoolfee
 
 type ListOfRecordResponse struct {
 	Code    string `json:"code"`

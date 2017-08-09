@@ -1,4 +1,4 @@
-package window
+package center
 
 type CondValue struct {
 	Type  string // And AndNot Or OrNot

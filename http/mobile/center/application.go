@@ -1,4 +1,4 @@
-package mobile
+package center
 
 type ApplicationListResponse struct {
 	Code    string `json:"code"`
