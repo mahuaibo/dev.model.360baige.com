@@ -5,4 +5,3 @@ type BatchModify struct {
 	UpdateTime int64  //更新时间
 	Status     int8   //更新状态
 }
-
