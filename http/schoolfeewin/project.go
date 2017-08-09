@@ -12,7 +12,7 @@ type ListOfProject struct {
 
 type Project struct {
 	Id         int64 `json:"id"`          // ID主键
-	CreateTime int64 `json:"create_time"` // 创建时间
+	CreateTime string `json:"create_time"` // 创建时间
 	UpdateTime int64 `json:"update_time"` // 更新时间
 	CompanyId  int64 `json:"company_id"`  // 所属公司ID
 	Name       string `json:"name"`       // 项目名称
@@ -37,6 +37,12 @@ type ModifyProjectResponse struct {
 	Code    string `json:"code"`
 	Messgae string        `json:"messgae"`
 	Data    ModifyProject   `json:"data,omitempty"`
+}
+
+type DetailProjectResponse struct {
+	Code    string `json:"code"`
+	Messgae string        `json:"messgae"`
+	Data    Project   `json:"data,omitempty"`
 }
 
 type ModifyProject struct {
