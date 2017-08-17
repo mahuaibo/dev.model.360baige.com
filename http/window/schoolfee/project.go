@@ -2,7 +2,7 @@ package schoolfee
 
 type ListOfProjectResponse struct {
 	Code    string `json:"code"`
-	Messgae string        `json:"messgae"`
+	Message string        `json:"message"`
 	Data    ListOfProject   `json:"data,omitempty"`
 }
 
@@ -24,7 +24,7 @@ type Project struct {
 
 type AddProjectResponse struct {
 	Code    string `json:"code"`
-	Messgae string        `json:"messgae"`
+	Message string        `json:"message"`
 	Data    AddProject   `json:"data,omitempty"`
 }
 
@@ -35,13 +35,13 @@ type AddProject struct {
 
 type ModifyProjectResponse struct {
 	Code    string `json:"code"`
-	Messgae string        `json:"messgae"`
+	Message string        `json:"message"`
 	Data    ModifyProject   `json:"data,omitempty"`
 }
 
 type DetailProjectResponse struct {
 	Code    string `json:"code"`
-	Messgae string        `json:"messgae"`
+	Message string        `json:"message"`
 	Data    Project   `json:"data,omitempty"`
 }
 

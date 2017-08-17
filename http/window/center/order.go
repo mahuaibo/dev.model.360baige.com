@@ -6,7 +6,7 @@ import (
 
 type OrderListResponse struct {
 	Code    string `json:"code"`
-	Messgae string        `json:"messgae"`
+	Message string        `json:"message"`
 	Data    OrderList   `json:"data,omitempty"`
 }
 type OrderList struct {
@@ -41,7 +41,7 @@ type OrderValue struct {
 
 type OrderDetailResponse struct {
 	Code    string `json:"code"`
-	Messgae string        `json:"messgae"`
+	Message string        `json:"message"`
 	Data    OrderDetail   `json:"data,omitempty"`
 }
 

@@ -2,13 +2,13 @@ package center
 
 type UserLoginResponse struct {
 	Code    string `json:"code"`
-	Messgae string        `json:"messgae"`
+	Message string        `json:"message"`
 	Data    UserLogin   `json:"data,omitempty"`
 }
 
 type ModifyPasswordResponse struct {
 	Code    string `json:"code"`
-	Messgae string        `json:"messgae"`
+	Message string        `json:"message"`
 }
 
 type UserLogin struct {
@@ -25,6 +25,6 @@ type UserDetail struct {
 }
 type UserDetailResponse struct {
 	Code    string `json:"code"`
-	Messgae string        `json:"messgae"`
+	Message string        `json:"message"`
 	Data    UserDetail   `json:"data,omitempty"`
 }

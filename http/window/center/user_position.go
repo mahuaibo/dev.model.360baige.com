@@ -6,7 +6,7 @@ import (
 
 type UserPositionResponse struct {
 	Code    string `json:"code"`
-	Messgae string        `json:"messgae"`
+	Message string        `json:"message"`
 	Data    []UserPositionListItem   `json:"data,omitempty"`
 }
 
@@ -42,7 +42,7 @@ type UserPositionListItem struct {
 }
 type UserPositionTokenResponse struct {
 	Code    string `json:"code"`
-	Messgae string        `json:"messgae"`
+	Message string        `json:"message"`
 	Data    UserPositionToken   `json:"data,omitempty"`
 }
 type UserPositionToken struct {

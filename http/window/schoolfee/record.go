@@ -2,13 +2,13 @@ package schoolfee
 
 type ListOfRecordResponse struct {
 	Code    string `json:"code"`
-	Messgae string        `json:"messgae"`
+	Message string        `json:"message"`
 	Data    ListOfRecord   `json:"data,omitempty"`
 }
 
 type ClassListOfRecordResponse struct {
 	Code    string `json:"code"`
-	Messgae string        `json:"messgae"`
+	Message string        `json:"message"`
 	Data    []map[string]string   `json:"data,omitempty"`
 }
 
@@ -36,7 +36,7 @@ type Record struct {
 
 type DeleteRecordResponse struct {
 	Code    string `json:"code"`
-	Messgae string        `json:"messgae"`
+	Message string        `json:"message"`
 	Data    DeleteRecord   `json:"data,omitempty"`
 }
 
@@ -46,7 +46,7 @@ type DeleteRecord struct {
 
 type UploadRecordResponse struct {
 	Code    string `json:"code"`
-	Messgae string        `json:"messgae"`
+	Message string        `json:"message"`
 	Data    UploadRecord   `json:"data,omitempty"`
 }
 
@@ -56,7 +56,7 @@ type UploadRecord struct {
 
 type DownloadRecordResponse struct {
 	Code    string `json:"code"`
-	Messgae string        `json:"messgae"`
+	Message string        `json:"message"`
 	Data    DownloadRecord   `json:"data,omitempty"`
 }
 
@@ -66,7 +66,7 @@ type DownloadRecord struct {
 
 type AddRecordResponse struct {
 	Code    string `json:"code"`
-	Messgae string        `json:"messgae"`
+	Message string        `json:"message"`
 	Data    AddRecord   `json:"data,omitempty"`
 }
 
@@ -76,7 +76,7 @@ type AddRecord struct {
 
 type DetailRecordResponse struct {
 	Code    string `json:"code"`
-	Messgae string        `json:"messgae"`
+	Message string        `json:"message"`
 	Data    DetailRecord   `json:"data,omitempty"`
 }
 
@@ -86,7 +86,7 @@ type DetailRecord struct {
 
 type ModifyRecordResponse struct {
 	Code    string `json:"code"`
-	Messgae string        `json:"messgae"`
+	Message string        `json:"message"`
 	Data    ModifyRecord   `json:"data,omitempty"`
 }
 

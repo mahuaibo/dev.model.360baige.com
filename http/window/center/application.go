@@ -6,7 +6,7 @@ import (
 
 type ApplicationListResponse struct {
 	Code    string `json:"code"`
-	Messgae string        `json:"messgae"`
+	Message string        `json:"message"`
 	Data    ApplicationList   `json:"data,omitempty"`
 }
 type ApplicationList struct {
@@ -31,7 +31,7 @@ type ApplicationListPaginator struct {
 }
 type ApplicationTplListResponse struct {
 	Code    string `json:"code"`
-	Messgae string        `json:"messgae"`
+	Message string        `json:"message"`
 	Data    ApplicationTplList   `json:"data,omitempty"`
 }
 type ApplicationTplList struct {
@@ -72,7 +72,7 @@ type ApplicationTplValue struct {
 }
 type ApplicationDetailResponse struct {
 	Code    string `json:"code"`
-	Messgae string        `json:"messgae"`
+	Message string        `json:"message"`
 	Data    ApplicationDetail   `json:"data,omitempty"`
 }
 
@@ -90,11 +90,11 @@ type ApplicationDetail struct {
 }
 type ModifyApplicationStatusResponse struct {
 	Code    string `json:"code"`
-	Messgae string        `json:"messgae"`
+	Message string        `json:"message"`
 }
 type ModifyApplicationTplStatusResponse struct {
 	Code    string `json:"code"`
-	Messgae string        `json:"messgae"`
+	Message string        `json:"message"`
 	Data    ApplicationTplStatus   `json:"data,omitempty"`
 }
 

@@ -6,7 +6,7 @@ import (
 
 type CompanyDetailResponse struct {
 	Code    string `json:"code"`
-	Messgae string        `json:"messgae"`
+	Message string        `json:"message"`
 	Data    CompanyDetail   `json:"data,omitempty"`
 }
 type CompanyDetail struct {
@@ -26,7 +26,7 @@ type CompanyDetail struct {
 }
 type CompanyModifyResponse struct {
 	Code    string `json:"code"`
-	Messgae string        `json:"messgae"`
+	Message string        `json:"message"`
 	Data    CompanyDetail   `json:"data,omitempty"`
 }
 

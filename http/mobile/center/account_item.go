@@ -9,7 +9,7 @@ type AccountItemStatisticsCond struct {
 }
 type AccountItemListResponse struct {
 	Code    string `json:"code"`
-	Messgae string        `json:"messgae"`
+	Message string        `json:"message"`
 	Data    AccountItemList   `json:"data,omitempty"`
 }
 type AccountItemList struct {
@@ -29,7 +29,7 @@ type AccountItemListValue struct {
 
 type AccountItemDetailResponse struct {
 	Code    string `json:"code"`
-	Messgae string        `json:"messgae"`
+	Message string        `json:"message"`
 	Data    AccountItemDetail   `json:"data,omitempty"`
 }
 

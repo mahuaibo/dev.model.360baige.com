@@ -2,7 +2,7 @@ package center
 
 type AccountStatisticsResponse struct {
 	Code    string `json:"code"`
-	Messgae string        `json:"messgae"`
+	Message string        `json:"message"`
 	Data    AccountStatistics   `json:"data,omitempty"`
 }
 type AccountStatistics struct {

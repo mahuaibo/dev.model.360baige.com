@@ -6,7 +6,7 @@ import (
 
 type LoggerAddResponse struct {
 	Code    string `json:"code"`
-	Messgae string        `json:"messgae"`
+	Message string        `json:"message"`
 	Data    LoggerAdd   `json:"data,omitempty"`
 }
 type LoggerAdd struct {
@@ -14,7 +14,7 @@ type LoggerAdd struct {
 }
 type LoggerListResponse struct {
 	Code    string `json:"code"`
-	Messgae string        `json:"messgae"`
+	Message string        `json:"message"`
 	Data    LoggerList   `json:"data,omitempty"`
 }
 type LoggerList struct {

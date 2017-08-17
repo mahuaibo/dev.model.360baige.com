@@ -2,7 +2,7 @@ package center
 
 type MessageListResponse struct {
 	Code    string `json:"code"`
-	Messgae string        `json:"messgae"`
+	Message string        `json:"message"`
 	Data    MessageList   `json:"data,omitempty"`
 }
 type MessageList struct {
@@ -21,7 +21,7 @@ type MessageListValue struct {
 
 type MessageDetailResponse struct {
 	Code    string `json:"code"`
-	Messgae string        `json:"messgae"`
+	Message string        `json:"message"`
 	Data    MessageDetail   `json:"data,omitempty"`
 }
 
