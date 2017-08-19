@@ -13,7 +13,6 @@ type ListOfStructure struct {
 type StructureData struct {
 	Id       int64          `json:"id"`
 	Label    string          `json:"label"`
-	Type     int8           `json:"type"`
 	Children []StructureData `json:"children"`
 }
 
