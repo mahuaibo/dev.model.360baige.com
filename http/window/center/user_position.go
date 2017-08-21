@@ -12,9 +12,6 @@ type UserPositionResponse struct {
 
 type UserPositionPaginator struct {
 	Cond        []CondValue
-			  //Cond        orm.Condition
-			  //Cond        []byte
-			  //Cond        string
 	Cols        []string
 	OrderBy     []string
 	List        []user.UserPosition
@@ -32,13 +29,10 @@ type UserPositionListPaginator struct {
 	Total    int64 //总数
 }
 type UserPositionListItem struct {
-	Id               int64 `json:"id"`                  //id
-	CompanyName      string `json:"company_name"`       //公司名称
-	CompanyShortName string `json:"company_short_name"` //公司名称
-	CompanyId        int64  `json:"company_id"`         //公司id
-	Type             int8 `json:"type"`                 //身份类型 11：孩子 12家长 13教师 24运营商 35服务商 46 管理员
-	PersonId         int64 `json:"person_id"`           // 人事ID
-	CompanyStatus    int8 `json:"status"`               // 1 启用 0 停用
+	Id          int64 `json:"user_position_id"`  //id
+	Type        int8 `json:"user_position_type"` //身份类型 11：孩子 12家长 13教师 24运营商 35服务商 46 管理员
+	CompanyLogo string `json:"company_logo"`     //公司名称
+	CompanyName string `json:"company_name"`     //公司名称
 }
 type UserPositionTokenResponse struct {
 	Code    string `json:"code"`

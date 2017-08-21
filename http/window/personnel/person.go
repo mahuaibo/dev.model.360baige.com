@@ -18,7 +18,7 @@ type Person struct {
 	Code       string`db:"code" json:"code"`                // 编号
 	Name       string `db:"name" json:"name"`               // 名称
 	Sex        string `db:"sex" json:"sex"`                 // 性别
-	Birthday   int64 `db:"birthday" json:"birthday"`        // 生日
+	Birthday   string `db:"birthday" json:"birthday"`        // 生日
 	Type       int8 `db:"type" json:"type"`                 // 类型 1.教师   2.家长   3.学生
 	Phone      string `db:"phone" json:"phone"`             // 联系方式
 	Contact    string `db:"contact" json:"contact"`         // 联系人

@@ -16,3 +16,7 @@ type UserLogin struct {
 	ExpireIn     int64 `db:"expire_in" json:"expire_in"`          // 访问时效
 }
 
+type UserRegisterResponse struct {
+	Code    string `json:"code"`
+	Message string        `json:"message"`
+}
