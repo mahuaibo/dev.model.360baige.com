@@ -13,24 +13,24 @@ type ClassListOfRecordResponse struct {
 }
 
 type ListOfRecord struct {
-	List []Record
+	List []Record `json:"list"`
 }
 
 type Record struct {
 	Id         int64 `json:"id"`          // 主键
-	CreateTime string `json:"create_time"` // 创建时间
-	UpdateTime int64 `json:"update_time"` // 更新时间
-	CompanyId  int64 `json:"company_id"`  // 所属公司ID
-	ProjectId  int64 `json:"project_id"`  // 项目ID
+	CreateTime string `json:"createTime"` // 创建时间
+	UpdateTime int64 `json:"updateTime"`  // 更新时间
+	CompanyId  int64 `json:"companyId"`   // 所属公司ID
+	ProjectId  int64 `json:"projectId"`   // 项目ID
 	Name       string `json:"name"`       // 姓名
-	ClassName  string `json:"class_name"` // 班级名称
-	IdCard     string `json:"id_card"`    // 身份证号
+	ClassName  string `json:"className"`  // 班级名称
+	IdCard     string `json:"idCard"`     // 身份证号
 	Num        string `json:"num"`        // 编号
 	Phone      string `json:"phone"`      // 联系电话
 	Status     int8 `json:"status"`       // 状态 -1删除
 	Price      float64 `json:"price"`     // 应缴费用
-	IsFee      int8 `json:"is_fee"`       // 是否缴费
-	FeeTime    int64 `json:"fee_time"`    // 缴费时间（毫秒）
+	IsFee      int8 `json:"isFee"`        // 是否缴费
+	FeeTime    int64 `json:"feeTime"`     // 缴费时间（毫秒）
 	Desc       string `json:"desc"`       // 备注
 }
 
@@ -41,7 +41,7 @@ type DeleteRecordResponse struct {
 }
 
 type DeleteRecord struct {
-	Count int64
+	Count int64 `json:"count"`
 }
 
 type UploadRecordResponse struct {
@@ -51,7 +51,7 @@ type UploadRecordResponse struct {
 }
 
 type UploadRecord struct {
-	Count int64
+	Count int64 `json:"count"`
 }
 
 type DownloadRecordResponse struct {
@@ -61,7 +61,7 @@ type DownloadRecordResponse struct {
 }
 
 type DownloadRecord struct {
-	List []Record
+	List []Record `json:"list"`
 }
 
 type AddRecordResponse struct {
@@ -81,7 +81,7 @@ type DetailRecordResponse struct {
 }
 
 type DetailRecord struct {
-	Data Record
+	Data Record `json:"data"`
 }
 
 type ModifyRecordResponse struct {

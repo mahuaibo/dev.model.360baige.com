@@ -8,8 +8,8 @@ type AccountStatisticsResponse struct {
 
 type AccountStatistics struct {
 	Balance        float64 `json:"balance"`        // 余额
-	TotalEntry     float64 `json:"total_entry"`     // 总入账
-	TotalDischarge float64 `json:"total_discharge"` // 总出账
-	MonthIncome    float64 `json:"month_income"`    // 月收入
-	MonthPay       float64 `json:"month_pay"`       // 月支出
+	TotalEntry     float64 `json:"totalEntry"`     // 总入账
+	TotalDischarge float64 `json:"totalDischarge"` // 总出账
+	MonthIncome    float64 `json:"monthIncome"`    // 月收入
+	MonthPay       float64 `json:"monthPay"`       // 月支出
 }
