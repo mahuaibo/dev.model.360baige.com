@@ -12,7 +12,7 @@ type ModifyPasswordResponse struct {
 }
 
 type UserLogin struct {
-	Username     string `json:"username"`     // 用户名
+	Head         string `json:"head"`         // 头像
 	AccessTicket string `json:"accessTicket"` // 访问令牌
 	ExpireIn     int64 `json:"expireIn"`      // 访问时效
 }
