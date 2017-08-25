@@ -13,7 +13,10 @@ type ClassListOfRecordResponse struct {
 }
 
 type ListOfRecord struct {
-	List []Record `json:"list"`
+	List     []Record `json:"list"`
+	Total    int64 `json:"total"`
+	PageSize int64 `json:"pageSize"`
+	Current  int64 `json:"current"`
 }
 
 type Record struct {
@@ -28,9 +31,9 @@ type Record struct {
 	Num        string `json:"num"`        // 编号
 	Phone      string `json:"phone"`      // 联系电话
 	Status     int8 `json:"status"`       // 状态 -1删除
-	Price      float64 `json:"price"`     // 应缴费用
+	Price      string `json:"price"`      // 应缴费用
 	IsFee      int8 `json:"isFee"`        // 是否缴费
-	FeeTime    int64 `json:"feeTime"`     // 缴费时间（毫秒）
+	FeeTime    string `json:"feeTime"`    // 缴费时间（毫秒）
 	Desc       string `json:"desc"`       // 备注
 }
 

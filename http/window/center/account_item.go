@@ -29,6 +29,8 @@ type AccountItemListValue struct {
 	CreateTime string `json:"createTime"` // 创建时间
 	Amount     float64 `json:"amount"`    // 交易金额
 	AmountType string `json:"amountType"` // 交易金额类型
+	Remark     string `json:"remark"`     // 交易金额类型
+	Balance    float64 `json:"balance"`   // 交易金额类型
 }
 
 type AccountItemDetailResponse struct {

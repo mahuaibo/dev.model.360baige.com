@@ -1,8 +1,7 @@
 package schoolfee
 
-// Response 状态码
 const (
-	ResponseSystemErr = "500"
-	ResponseLogicErr  = "400"
-	ResponseNormal    = "200"
+	ErrorSystem = "500"
+	ErrorLogic  = "400"
+	Normal      = "200"
 )
