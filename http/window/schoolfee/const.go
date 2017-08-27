@@ -45,7 +45,7 @@ func init() {
 		30000: "访问令牌无效请重新登录",
 	}
 	ListOfErrorSystem = map[int64]string{
-		40000: "请求参数不能为空",
+		40000: "请求参数错误",
 	}
 	ListOfErrorLogic = map[int64]string{
 		50000: "访问令牌验证服务异常",
