@@ -41,11 +41,13 @@ type ApplicationValue struct {
 	Site       string `json:"site"`       // 访问链接tpl
 }
 type ApplicationTplValue struct {
-	Id                 int64 `json:"id"`     // 主键自动增长id aptplid
-	Name               string `json:"name"`  // 名称tpl
-	Image              string `json:"image"` // 图片链接tpl
-	Desc               string `json:"desc"`  // 简介tpl
-	SubscriptionStatus int8 `json:"status"`  // 状态 0 未订阅 1 已订阅
+	Id                 int64 `json:"id"`      // 主键自动增长id aptplid
+	Name               string `json:"name"`   // 名称tpl
+	Image              string `json:"image"`  // 图片链接tpl
+	Desc               string `json:"desc"`   // 简介tpl
+	Price              float64 `json:"price"` // 价格 tpl
+	PayCycle           int8 `json:"payCycle"` // 0无1月2季3半年4年tpl
+	SubscriptionStatus int8 `json:"status"`   // 状态 0 未订阅 1 已订阅
 }
 type ApplicationDetailResponse struct {
 	Code    string `json:"code"`
