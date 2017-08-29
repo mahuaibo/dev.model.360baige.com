@@ -27,9 +27,41 @@ type SearchProjectInfoResponse struct {
 	Message string        `json:"message"`
 	Data    ListOfRecordProject   `json:"data,omitempty"`
 }
+type ProjectDetailResponse struct {
+	Code    string `json:"code"`
+	Message string        `json:"message"`
+	Data    Project   `json:"data,omitempty"`
+}
+type RecordHistoryResponse struct {
+	Code    string `json:"code"`
+	Message string        `json:"message"`
+	Data    ListOfRecordProject   `json:"data,omitempty"`
+}
+type AddRecordResponse struct {
+	Code    string `json:"code"`
+	Message string        `json:"message"`
+	Data    AddRecord   `json:"data,omitempty"`
+}
+type AddMultipleRecordResponse struct {
+	Code    string `json:"code"`
+	Message string        `json:"message"`
+	Data    AddMultipleRecord   `json:"data,omitempty"`
+}
+type AddMultipleRecord struct {
+	Num int64 `json:"num"`
+}
+type AddRecord struct {
+	Id int64 `json:"id"`
+}
 
 type ListOfRecordProject struct {
 	List []RecordProject `json:"list"`
+	OrderBy     []string `json:"orderBy"`
+	Total       int64  `json:"total"`       //总数
+	PageSize    int64  `json:"pageSize"`    //每页数量
+	Current     int64  `json:"current"`     //当前页码
+	CurrentSize int64  `json:"currentSize"` //当前页数量
+	SearchKey        string `json:"search"`        //搜索key
 }
 
 type Record struct {
