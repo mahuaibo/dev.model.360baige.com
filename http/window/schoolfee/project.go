@@ -7,7 +7,10 @@ type ListOfProjectResponse struct {
 }
 
 type ListOfProject struct {
-	List []Project `json:"list"`
+	List     []Project `json:"list"`
+	Total    int64 `json:"total"`
+	Current  int64 `json:"current"`
+	PageSize int64 `json:"pageSize"`
 }
 
 type Project struct {

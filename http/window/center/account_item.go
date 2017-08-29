@@ -12,6 +12,7 @@ type AccountItemListResponse struct {
 	Message string        `json:"message"`
 	Data    AccountItemList   `json:"data,omitempty"`
 }
+
 type AccountItemList struct {
 	OrderBy     []string `json:"orderBy"`            // 排序
 	List        []AccountItemListValue `json:"list"` // 集合
@@ -19,6 +20,8 @@ type AccountItemList struct {
 	PageSize    int64 `json:"pageSize"`              // 每页数量
 	Current     int64 `json:"current"`               // 当前页码
 	CurrentSize int64 `json:"currentSize"`           // 当前页数量
+	InAccount   float64 `json:"inAccount"`           // 进账
+	OutAccount  float64 `json:"outAccount"`          // 出账
 }
 
 type AccountItemListValue struct {
@@ -26,6 +29,8 @@ type AccountItemListValue struct {
 	CreateTime string `json:"createTime"` // 创建时间
 	Amount     float64 `json:"amount"`    // 交易金额
 	AmountType string `json:"amountType"` // 交易金额类型
+	Remark     string `json:"remark"`     // 交易金额类型
+	Balance    float64 `json:"balance"`   // 交易金额类型
 }
 
 type AccountItemDetailResponse struct {
