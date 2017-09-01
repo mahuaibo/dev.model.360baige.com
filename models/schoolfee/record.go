@@ -11,7 +11,7 @@ type Record struct {
 	IdCard     string    `db:"id_card" json:"idCard"`        // 身份证号
 	Num        string    `db:"num" json:"num"`               // 编号
 	Phone      string    `db:"phone" json:"phone"`           // 联系电话
-	Price      float64    `db:"price" json:"price"`          // 应缴费用
+	Price      int64    `db:"price" json:"price"`            // 应缴费用
 	IsFee      int8    `db:"is_fee" json:"isFee"`            // 是否缴费 0：未缴费 1：缴费
 	FeeTime    int64    `db:"fee_time" json:"feeTime"`       // 缴费时间（毫秒）
 	Desc       string    `db:"desc" json:"desc"`             // 备注

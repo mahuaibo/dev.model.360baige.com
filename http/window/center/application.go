@@ -5,6 +5,7 @@ type ApplicationListResponse struct {
 	Message string        `json:"message"`
 	Data    ApplicationList   `json:"data,omitempty"`
 }
+
 type ApplicationList struct {
 	OrderBy     []string `json:"orderBy"`
 	List        []ApplicationValue `json:"list"`
@@ -21,6 +22,7 @@ type ApplicationTplListResponse struct {
 	Message string        `json:"message"`
 	Data    ApplicationTplList   `json:"data,omitempty"`
 }
+
 type ApplicationTplList struct {
 	OrderBy     []string  `json:"orderBy"`
 	List        []ApplicationTplValue `json:"list"`
@@ -40,15 +42,18 @@ type ApplicationValue struct {
 	Status     int8 `json:"status"`       // 状态 0 启用 1停用
 	Site       string `json:"site"`       // 访问链接tpl
 }
+
 type ApplicationTplValue struct {
-	Id                 int64 `json:"id"`      // 主键自动增长id aptplid
-	Name               string `json:"name"`   // 名称tpl
-	Image              string `json:"image"`  // 图片链接tpl
-	Desc               string `json:"desc"`   // 简介tpl
-	Price              string `json:"price"`  // 价格 tpl
-	PayCycle           int8 `json:"payCycle"` // 0无1月2季3半年4年tpl
-	SubscriptionStatus int8 `json:"status"`   // 状态 0 未订阅 1 已订阅
+	Id                 int64 `json:"id"`           // 主键自动增长id aptplid
+	Name               string `json:"name"`        // 名称tpl
+	Image              string `json:"image"`       // 图片链接tpl
+	Desc               string `json:"desc"`        // 简介tpl
+	Price              int64 `json:"price"`        // 价格 tpl
+	PayCycle           int8 `json:"payCycle"`      // 0无1月2季3半年4年tpl
+	Subscription       int64 `json:"subscription"` // 订阅量
+	SubscriptionStatus int8 `json:"status"`        // 状态 0 未订阅 1 已订阅
 }
+
 type ApplicationTalDetailResponse struct {
 	Code    string `json:"code"`
 	Message string        `json:"message"`
@@ -56,26 +61,24 @@ type ApplicationTalDetailResponse struct {
 }
 
 type ApplicationTalDetail struct {
-	Name        string `json:"name"`             // 名称
-	Image       string `json:"image"`            // 图片链接
-	Desc        string `json:"desc"`             // 产品说明
-	PriceDesc   string `json:"priceDesc"`        // 费用说明
-	PayType     string `json:"payType"`          // 0:限免 1:永久免费 2:1次性收费 3:周期收费
-	Price       float64 `json:"price"`           // 价格
-	PayCycle    string `json:"payCycle"`         // 0无1月2季3半年4年
-	Application Application `json:"application"` // 0无1月2季3半年4年
-}
-
-type Application struct {
-	Id        int64 `json:"id"`
-	StartTime string `json:"startTime"`
-	EndTime   string `json:"endTime"`
+	Id                 int64 `json:"id"`                // 主键自动增长id aptplid
+	Name               string `json:"name"`             // 名称
+	Image              string `json:"image"`            // 图片链接
+	Desc               string `json:"desc"`             // 产品说明
+	PriceDesc          string `json:"priceDesc"`        // 费用说明
+	PayType            int8 `json:"payType"`            // 0:限免 1:永久免费 2:1次性收费 3:周期收费
+	Price              int64 `json:"price"`             // 价格
+	PayCycle           string `json:"payCycle"`         // 0无1月2季3半年4年
+	SubscriptionStatus int8 `json:"subscriptionStatus"` //
+	StartTime          string `json:"startTime"`        //
+	EndTime            string `json:"endTime"`          //
 }
 
 type ModifyApplicationStatusResponse struct {
 	Code    string `json:"code"`
 	Message string `json:"message"`
 }
+
 type ModifyApplicationTplStatusResponse struct {
 	Code    string `json:"code"`
 	Message string        `json:"message"`
@@ -85,22 +88,6 @@ type ModifyApplicationTplStatusResponse struct {
 type ApplicationTplStatus struct {
 	AppId            int64 `json:"appId"`            //ap id
 	ApplicationTplId int64 `json:"applicationTplId"` // 应用ID
-}
-
-func GetPayTypeName(ptype int8) string {
-	// 0:限免 1:永久免费 2:1次性收费 3:周期收费tpl
-	var rPtype string
-	switch ptype {
-	case 0:
-		rPtype = "限免"
-	case 1:
-		rPtype = "永久免费"
-	case 2:
-		rPtype = "1次性收费"
-	case 3:
-		rPtype = "周期收费"
-	}
-	return rPtype
 }
 
 func GetPayCycleName(ptype int8) string {

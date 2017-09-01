@@ -55,13 +55,13 @@ type AddRecord struct {
 }
 
 type ListOfRecordProject struct {
-	List []RecordProject `json:"list"`
+	List        []RecordProject `json:"list"`
 	OrderBy     []string `json:"orderBy"`
 	Total       int64  `json:"total"`       //总数
 	PageSize    int64  `json:"pageSize"`    //每页数量
 	Current     int64  `json:"current"`     //当前页码
 	CurrentSize int64  `json:"currentSize"` //当前页数量
-	SearchKey        string `json:"search"`        //搜索key
+	SearchKey   string `json:"search"`      //搜索key
 }
 
 type Record struct {
@@ -76,7 +76,7 @@ type Record struct {
 	Num        string `json:"num"`       // 编号
 	Phone      string `json:"phone"`     // 联系电话
 	Status     int8 `json:"status"`      // 状态 -1删除
-	Price      float64 `json:"price"`    // 应缴费用
+	Price      int64 `json:"price"`      // 应缴费用
 	IsFee      int8 `json:"isFee"`       // 是否缴费
 	FeeTime    int64 `json:"feeTime"`    // 缴费时间（毫秒）
 	Desc       string `json:"desc"`      // 备注
@@ -94,7 +94,7 @@ type RecordProject struct {
 	Num        string `json:"num"`       // 编号
 	Phone      string `json:"phone"`     // 联系电话
 	Status     int8 `json:"status"`      // 状态 -1删除
-	Price      float64 `json:"price"`    // 应缴费用
+	Price      int64 `json:"price"`      // 应缴费用
 	IsFee      int8 `json:"isFee"`       // 是否缴费
 	FeeTime    int64 `json:"feeTime"`    // 缴费时间（毫秒）
 	Desc       string `json:"desc"`      // 备注

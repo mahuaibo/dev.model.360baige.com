@@ -19,7 +19,7 @@ type OrderValue struct {
 	Id         int64 `json:"id"`          // 主键自动增长id
 	CreateTime string `json:"createTime"` // 创建时间
 	Code       string `json:"code"`       // 订单编号
-	Price      float64 `json:"price"`     // 单价
+	Price      int64 `json:"price"`       // 单价
 	Type       int8 `json:"type"`         // 订单类型
 	PayType    string `json:"payType"`    // 支付方式 1在线支付   2线下支付
 	Brief      string `json:"brief"`      // 详情
@@ -35,7 +35,7 @@ type OrderDetailResponse struct {
 type OrderDetail struct {
 	CreateTime string `json:"createTime"` // 创建时间
 	Code       string `json:"code"`       // 订单编号
-	Price      float64 `json:"price"`     // 单价
+	Price      int64 `json:"price"`       // 单价
 	Type       int8 `json:"type"`         // 订单类型
 	PayType    string `json:"payType"`    // 支付方式 1在线支付   2线下支付
 	Brief      string `json:"brief"`      // 详情
@@ -49,7 +49,8 @@ type OrderAddResponse struct {
 }
 
 type OrderAdd struct {
-	Id int64 `json:"id"`
+	Id      int64 `json:"id"`
+	CodeUrl string  `json:"codeUrl"`
 }
 
 type OrderPayResponse struct {
@@ -60,7 +61,7 @@ type OrderPayResponse struct {
 
 type OrderPay struct {
 	Code      string   `json:"code"`
-	Price     string   `json:"price"`
+	Price     int64   `json:"price"`
 	Brief     string   `json:"brief"`
 	TradeType string   `json:"tradeType"` // 交易类型
 	PrepayId  string   `json:"prepayId"`  // 预支付交易会话标识
@@ -71,7 +72,6 @@ type OrderPay struct {
 type OrderPayResultResponse struct {
 	Code    string `json:"code"`
 	Message string `json:"message"`
-	//Data    OrderPay  `json:"data,omitempty"`
 }
 
 func GetStatus(status int8) string {
