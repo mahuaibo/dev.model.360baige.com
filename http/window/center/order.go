@@ -41,3 +41,27 @@ type OrderDetail struct {
 	Brief      string `json:"brief"`      // 详情
 	Status     string  `json:"status"`    // 订单状态：0:撤回 1：待审核  2：已通过 3：未通过 4：发货中 5：完成
 }
+
+type OrderAddResponse struct {
+	Code    string `json:"code"`
+	Message string        `json:"message"`
+}
+
+func GetStatus(status int8) string {
+	var rStatus string
+	switch  status {
+	case 0:
+		rStatus = "撤回"
+	case 1:
+		rStatus = "待审核"
+	case 2:
+		rStatus = "已通过"
+	case 3:
+		rStatus = "未通过"
+	case 4:
+		rStatus = "发货中"
+	default:
+		rStatus = "完成"
+	}
+	return rStatus
+}

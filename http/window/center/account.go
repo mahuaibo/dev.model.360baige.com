@@ -7,7 +7,7 @@ type AccountStatisticsResponse struct {
 }
 
 type AccountStatistics struct {
-	Balance    float64 `json:"balance"`    // 余额
-	OutAccount float64 `json:"outAccount"` // 总出账
-	InAccount  float64 `json:"inAccount"`  // 总入账
+	Balance    string `json:"balance"`    // 余额
+	OutAccount string `json:"outAccount"` // 总出账
+	InAccount  string `json:"inAccount"`  // 总入账
 }
