@@ -25,6 +25,7 @@ type OrderValue struct {
 	TotalPrice  int64 `json:"totalPrice"`  // 总价
 	ProductType int8 `json:"productType"`  // 分类
 	ProductId   int64 `json:"productId"`   // 分类
+	Brief       string `json:"brief"`      // 图片
 	Status      int8 `json:"status"`       // 状态
 }
 
@@ -63,4 +64,9 @@ type OrderPayResultResponse struct {
 	Code    string `json:"code"`
 	Message string `json:"message"`
 	Data    OrderPayResult  `json:"data,omitempty"`
+}
+
+type OrderCancelResponse struct {
+	Code    string `json:"code"`
+	Message string        `json:"message"`
 }

@@ -13,7 +13,8 @@ type Order struct {
 	Num              int64    `db:"num" json:"num"`                             // 数量
 	TotalPrice       int64    `db:"total_price" json:"totalPrice"`              // 总价
 	ProductType      int8     `db:"product_type" json:"productType"`            // 产品类型
-	ProductId        int64     `db:"product_id" json:"productId"`               // 产品ID
+	Image            string   `db:"image" json:"image"`                         // 订单图片
+	ProductId        int64    `db:"product_id" json:"productId"`                // 产品ID
 	PayType          int8     `db:"pay_type" json:"payType"`                    // 支付方式
 	Brief            string   `db:"brief" json:"brief"`                         // 详情
 	Status           int8     `db:"status" json:"status"`                       // 订单状态
