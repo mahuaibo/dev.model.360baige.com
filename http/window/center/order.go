@@ -56,7 +56,7 @@ type OrderAdd struct {
 }
 
 type OrderPayResult struct {
-	TradeState string  `json:"trade_state"`
+	TradeState string  `json:"tradeState"`
 }
 
 type OrderPayResultResponse struct {
