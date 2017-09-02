@@ -55,23 +55,12 @@ type OrderAdd struct {
 	CodeUrl string  `json:"codeUrl"`
 }
 
-type OrderPayResponse struct {
-	Code    string `json:"code"`
-	Message string `json:"message"`
-	Data    OrderPay  `json:"data,omitempty"`
-}
-
-type OrderPay struct {
-	Code      string   `json:"code"`
-	Price     int64   `json:"price"`
-	Brief     string   `json:"brief"`
-	TradeType string   `json:"tradeType"` // 交易类型
-	PrepayId  string   `json:"prepayId"`  // 预支付交易会话标识
-	CodeUrl   string   `json:"codeUrl"`   // 二维码链接
-	Openid    string   `json:"openid"`    // 用户标识
+type OrderPayResult struct {
+	TradeState string  `json:"trade_state"`
 }
 
 type OrderPayResultResponse struct {
 	Code    string `json:"code"`
 	Message string `json:"message"`
+	Data    OrderPayResult  `json:"data,omitempty"`
 }
