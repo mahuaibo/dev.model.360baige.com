@@ -9,8 +9,11 @@ type Order struct {
 	UserPositionType int8     `db:"user_position_type" json:"userPositionType"` // 身份类型
 	UserPositionId   int64    `db:"user_position_id" json:"userPositionId"`     // 身份ID
 	Code             string   `db:"code" json:"code"`                           // 订单编号
-	Price            int64  `db:"price" json:"price"`                           // 单价
-	Type             int8     `db:"type" json:"type"`                           // 订单类型
+	Price            int64    `db:"price" json:"price"`                         // 单价
+	Num              int64    `db:"num" json:"num"`                             // 数量
+	TotalPrice       int64    `db:"total_price" json:"totalPrice"`              // 总价
+	ProductType      int8     `db:"product_type" json:"productType"`            // 产品类型
+	ProductId        int64     `db:"product_id" json:"productId"`               // 产品ID
 	PayType          int8     `db:"pay_type" json:"payType"`                    // 支付方式
 	Brief            string   `db:"brief" json:"brief"`                         // 详情
 	Status           int8     `db:"status" json:"status"`                       // 订单状态

@@ -12,18 +12,20 @@ type OrderList struct {
 	PageSize    int64 `json:"pageSize"`    //每页数量
 	Current     int64 `json:"current"`     //当前页码
 	CurrentSize int64 `json:"currentSize"` //当前页数量
-	Status      int8  `json:"status"`      //订单状态：-2 全部 0:撤回 1：待审核 2：已通过 3：未通过 4：发货中 5：完成
+	Status      int8  `json:"status"`      //订单状态：
 }
 
 type OrderValue struct {
-	Id         int64 `json:"id"`          // 主键自动增长id
-	CreateTime string `json:"createTime"` // 创建时间
-	Code       string `json:"code"`       // 订单编号
-	Price      int64 `json:"price"`       // 单价
-	Type       int8 `json:"type"`         // 订单类型
-	PayType    string `json:"payType"`    // 支付方式 1在线支付   2线下支付
-	Brief      string `json:"brief"`      // 详情
-	Status     string `json:"status"`     // 订单状态：0:撤回 1：待审核  2：已通过 3：未通过 4：发货中 5：完成
+	Id          int64 `json:"id"`          // 主键自动增长id
+	Code        string `json:"code"`       // 订单编号
+	CreateTime  string `json:"createTime"` // 创建时间
+	Image       string `json:"image"`      // 图片
+	Price       int64 `json:"price"`       // 单价
+	Num         int64 `json:"num"`         // 数量
+	TotalPrice  int64 `json:"totalPrice"`  // 总价
+	ProductType int8 `json:"productType"`  // 分类
+	ProductId   int64 `json:"productId"`   // 分类
+	Status      int8 `json:"status"`       // 状态
 }
 
 type OrderDetailResponse struct {
@@ -33,13 +35,13 @@ type OrderDetailResponse struct {
 }
 
 type OrderDetail struct {
-	CreateTime string `json:"createTime"` // 创建时间
-	Code       string `json:"code"`       // 订单编号
-	Price      int64 `json:"price"`       // 单价
-	Type       int8 `json:"type"`         // 订单类型
-	PayType    string `json:"payType"`    // 支付方式 1在线支付   2线下支付
-	Brief      string `json:"brief"`      // 详情
-	Status     string  `json:"status"`    // 订单状态：0:撤回 1：待审核  2：已通过 3：未通过 4：发货中 5：完成
+	CreateTime  string `json:"createTime"` // 创建时间
+	Code        string `json:"code"`       // 订单编号
+	Price       int64 `json:"price"`       // 单价
+	ProductType int8 `json:"productType"`  // 订单类型
+	PayType     int8 `json:"payType"`      // 支付方式
+	Brief       string `json:"brief"`      // 详情
+	Status      int8  `json:"status"`      // 订单状态
 }
 
 type OrderAddResponse struct {
@@ -72,23 +74,4 @@ type OrderPay struct {
 type OrderPayResultResponse struct {
 	Code    string `json:"code"`
 	Message string `json:"message"`
-}
-
-func GetStatus(status int8) string {
-	var rStatus string
-	switch  status {
-	case 0:
-		rStatus = "撤回"
-	case 1:
-		rStatus = "待审核"
-	case 2:
-		rStatus = "已通过"
-	case 3:
-		rStatus = "未通过"
-	case 4:
-		rStatus = "发货中"
-	default:
-		rStatus = "完成"
-	}
-	return rStatus
 }
