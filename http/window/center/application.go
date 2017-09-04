@@ -70,7 +70,6 @@ type ApplicationTalDetail struct {
 	Price              int64 `json:"price"`             // 价格
 	PayCycle           string `json:"payCycle"`         // 0无1月2季3半年4年
 	SubscriptionStatus int8 `json:"subscriptionStatus"` //
-	StartTime          string `json:"startTime"`        //
 	EndTime            string `json:"endTime"`          //
 }
 
