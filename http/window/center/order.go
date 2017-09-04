@@ -36,13 +36,9 @@ type OrderDetailResponse struct {
 }
 
 type OrderDetail struct {
-	CreateTime  string `json:"createTime"` // 创建时间
-	Code        string `json:"code"`       // 订单编号
-	Price       int64 `json:"price"`       // 单价
-	ProductType int8 `json:"productType"`  // 订单类型
-	PayType     int8 `json:"payType"`      // 支付方式
-	Brief       string `json:"brief"`      // 详情
-	Status      int8  `json:"status"`      // 订单状态
+	Price      int64 `json:"price"`       // 单价
+	Num        int64 `json:"num"`         // 数量
+	Status     int8  `json:"status"`      // 订单状态
 }
 
 type OrderAddResponse struct {
