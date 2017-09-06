@@ -18,7 +18,7 @@ type CompanyDetail struct {
 	PositionY  float64 `json:"positionY"` // y
 	Remark     string `json:"remark"`     // 备注
 	Brief      string `json:"brief"`      // 简介
-	Status     int8 `json:"status"`       // 1 启用 0 停用
+	Status     int `json:"status"`       // 1 启用 0 停用
 }
 type CompanyModifyResponse struct {
 	Code    string `json:"code"`

@@ -19,10 +19,10 @@ type Project struct {
 	UpdateTime int64 `json:"updateTime"`  // 更新时间
 	CompanyId  int64 `json:"companyId"`   // 所属公司ID
 	Name       string `json:"name"`       // 项目名称
-	IsLimit    int8 `json:"isLimit"`      // 是否限制缴费
+	IsLimit    int `json:"isLimit"`      // 是否限制缴费
 	Desc       string `json:"desc"`       // 描述
 	Link       string `json:"link"`       // 描述链接
-	Status     int8 `json:"status"`       // 状态 -1注销 0正常
+	Status     int `json:"status"`       // 状态 -1注销 0正常
 }
 
 type AddProjectResponse struct {

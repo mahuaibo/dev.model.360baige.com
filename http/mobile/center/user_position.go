@@ -11,9 +11,9 @@ type UserPositionListItem struct {
 	CompanyName      string `db:"name" json:"company_name"`             //公司名称
 	CompanyShortName string `db:"short_name" json:"company_short_name"` //公司名称
 	CompanyId        int64  `db:"company_id" json:"company_id"`         //公司id
-	Type             int8 `db:"type" json:"type"`                       //身份类型 11：孩子 12家长 13教师 24运营商 35服务商 46 管理员
+	Type             int `db:"type" json:"type"`                       //身份类型 11：孩子 12家长 13教师 24运营商 35服务商 46 管理员
 	PersonId         int64 `db:"person_id" json:"person_id"`            // 人事ID
-	CompanyStatus    int8 `db:"status" json:"status"`                   // 1 启用 0 停用
+	CompanyStatus    int `db:"status" json:"status"`                   // 1 启用 0 停用
 }
 type UserPositionTokenResponse struct {
 	Code    string `json:"code"`

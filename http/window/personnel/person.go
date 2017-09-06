@@ -19,10 +19,10 @@ type Person struct {
 	Name       string `json:"name"`       // 名称
 	Sex        string `json:"sex"`        // 性别
 	Birthday   string `json:"birthday"`   // 生日
-	Type       int8 `json:"type"`         // 类型 1.教师   2.家长   3.学生
+	Type       int `json:"type"`         // 类型 1.教师   2.家长   3.学生
 	Phone      string `json:"phone"`      // 联系方式
 	Contact    string `json:"contact"`    // 联系人
-	Status     int8 `json:"status"`       // 状态 1.正常   2.异常  3.学生
+	Status     int `json:"status"`       // 状态 1.正常   2.异常  3.学生
 }
 
 type AddPersonResponse struct {

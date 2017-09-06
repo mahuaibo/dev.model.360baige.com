@@ -9,5 +9,5 @@ type Card struct {
 	CardNo     string    `db:"card_no" json:"cardNo"`        // IC卡编号
 	PhysicsNo  string    `db:"physics_no" json:"physicsNo"`  // 物理编号
 	BatchNo    string    `db:"batch_no" json:"batchNo"`      // 批次号
-	Status     int8    `db:"status" json:"status"`           // 状态 -1注销、0未出库、1已出库、2未绑定、3已绑定、4挂失
+	Status     int    `db:"status" json:"status"`            // 状态 -1注销、0未出库、1已出库、2未绑定、3已绑定、4挂失
 }

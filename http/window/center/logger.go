@@ -23,7 +23,7 @@ type LoggerList struct {
 	PageSize    int64 `json:"pageSize"`    //每页数量
 	Current     int64 `json:"current"`     //当前页码
 	CurrentSize int64 `json:"currentSize"` //当前页数量
-	Status      int8  `json:"status"`      //状态：0 启用 1停用
+	Status      int  `json:"status"`      //状态：0 启用 1停用
 	Name        string `json:"name"`       //搜索名称
 }
 

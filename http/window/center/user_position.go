@@ -22,7 +22,7 @@ type UserPositionToken struct {
 	ExpireIn    int64 `json:"expireIn"`     // 访问时效
 }
 
-func UserPositionName(UserPositionType int8) string {
+func UserPositionName(UserPositionType int) string {
 	if 0 <= UserPositionType && UserPositionType < 10 {
 		return "管理员"
 	} else if 10 <= UserPositionType && UserPositionType < 20 {

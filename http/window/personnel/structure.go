@@ -23,8 +23,8 @@ type Structure struct {
 	CompanyId  int64 `json:"companyId"`   // 所有者ID
 	ParentId   int64 `json:"parentId"`    // parent_id
 	Name       string `json:"name"`       // 名称
-	Type       int8 `json:"type"`         // 类型 1.班级
-	Status     int8 `json:"status"`       // 状态 0.下线  1.上线
+	Type       int `json:"type"`         // 类型 1.班级
+	Status     int `json:"status"`       // 状态 0.下线  1.上线
 }
 
 type AddStructureResponse struct {

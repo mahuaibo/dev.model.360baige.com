@@ -12,7 +12,7 @@ type ApplicationList struct {
 	PageSize    int64  //每页数量
 	Current     int64  //当前页码
 	CurrentSize int64  //当前页数量
-	Status      int8   //状态：0 启用 1停用
+	Status      int   //状态：0 启用 1停用
 	Name        string //搜索名称
 }
 type ApplicationTplListResponse struct {
@@ -27,7 +27,7 @@ type ApplicationTplList struct {
 	PageSize    int64  //每页数量
 	Current     int64  //当前页码
 	CurrentSize int64  //当前页数量
-	Status      int8   //状态：0 启用 1停用
+	Status      int   //状态：0 启用 1停用
 	Name        string //搜索名称
 }
 type ApplicationValue struct {
@@ -43,7 +43,7 @@ type ApplicationTplValue struct {
 	Name               string `db:"name" json:"name"`   // 名称tpl
 	Image              string `db:"image" json:"image"` // 图片链接tpl
 	Desc               string `db:"desc" json:"desc"`   // 简介tpl
-	SubscriptionStatus int8 `db:"status" json:"status"` // 状态 0 未订阅 1 已订阅
+	SubscriptionStatus int `db:"status" json:"status"` // 状态 0 未订阅 1 已订阅
 }
 type ApplicationDetailResponse struct {
 	Code    string `json:"code"`

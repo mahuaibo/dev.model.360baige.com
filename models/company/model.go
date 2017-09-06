@@ -4,8 +4,8 @@ type Company struct {
 	Id         int64    `db:"id" json:"id"`                  // 主键自动增长id
 	CreateTime int64    `db:"create_time" json:"createTime"` // 创建时间
 	UpdateTime int64    `db:"update_time" json:"updateTime"` // 更新时间
-	Type       int8    `db:"type" json:"type"`               // 类型：10：幼儿园 11：小学 12:中学 13：高中 20：运营  30：代理商 31：经销商
-	Level      int8    `db:"level" json:"level"`             // 地域级别：10：省级/直辖市 20：地市级/省会 30：区县级/城区
+	Type       int    `db:"type" json:"type"`                // 类型：10：幼儿园 11：小学 12:中学 13：高中 20：运营  30：代理商 31：经销商
+	Level      int    `db:"level" json:"level"`              // 地域级别：10：省级/直辖市 20：地市级/省会 30：区县级/城区
 	Logo       string    `db:"logo" json:"logo"`             // 企业LOGO
 	Name       string    `db:"name" json:"name"`             // 企业全名
 	ShortName  string    `db:"short_name" json:"shortName"`  // 企业简称（微信端显示使用）
@@ -18,5 +18,5 @@ type Company struct {
 	PositionY  float64    `db:"position_y" json:"positionY"` // y
 	Remark     string    `db:"remark" json:"remark"`         // 备注
 	Brief      string    `db:"brief" json:"brief"`           // 简介
-	Status     int8    `db:"status" json:"status"`           // 1 启用 0 停用
+	Status     int    `db:"status" json:"status"`            // 1 启用 0 停用
 }

@@ -8,10 +8,10 @@ type Machine struct {
 	Name         string    `db:"name" json:"name"`                  // 设备名称
 	MachineNo    string    `db:"machine_no" json:"machineNo"`       // 设备编号
 	PhysicsNo    string    `db:"physics_no" json:"physicsNo"`       // 物理编号
-	BatchNo      int8    `db:"batch_no" json:"batchNo"`             // 批次号
-	Type         int8    `db:"type" json:"type"`                    // 设备类型
+	BatchNo      int    `db:"batch_no" json:"batchNo"`              // 批次号
+	Type         int    `db:"type" json:"type"`                     // 设备类型
 	AccessSecret string    `db:"access_secret" json:"accessSecret"` // 访问密钥
 	AccessToken  string    `db:"access_token" json:"accessToken"`   // 访问令牌
 	ExpiresIn    int64    `db:"expires_in" json:"expiresIn"`        // 访问时效（毫秒）
-	Status       int8    `db:"status" json:"status"`                // 状态 -1注销、0未出库、1已出库、2未绑定、3已绑定、4挂失
+	Status       int    `db:"status" json:"status"`                 // 状态 -1注销、0未出库、1已出库、2未绑定、3已绑定、4挂失
 }

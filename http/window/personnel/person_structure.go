@@ -17,8 +17,8 @@ type PersonStructure struct {
 	CompanyId   int64 `json:"companyId"`   // 所有者ID
 	PersonId    int64 `json:"personId"`    // parent_id 人员ID
 	StructureId int64 `json:"structureId"` // structure_id 结构ID
-	Type        int8 `json:"type"`         // 类型
-	Status      int8 `json:"status"`       // 状态  1.正常
+	Type        int `json:"type"`         // 类型
+	Status      int `json:"status"`       // 状态  1.正常
 }
 
 type AddPersonStructureResponse struct {

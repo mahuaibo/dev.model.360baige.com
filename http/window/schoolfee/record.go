@@ -30,9 +30,9 @@ type Record struct {
 	IdCard     string `json:"idCard"`     // 身份证号
 	Num        string `json:"num"`        // 编号
 	Phone      string `json:"phone"`      // 联系电话
-	Status     int8 `json:"status"`       // 状态 -1删除
+	Status     int `json:"status"`       // 状态 -1删除
 	Price      int64 `json:"price"`       // 应缴费用
-	IsFee      int8 `json:"isFee"`        // 是否缴费
+	IsFee      int `json:"isFee"`        // 是否缴费
 	FeeTime    string `json:"feeTime"`    // 缴费时间（毫秒）
 	Desc       string `json:"desc"`       // 备注
 }

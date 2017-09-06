@@ -12,7 +12,7 @@ type OrderList struct {
 	PageSize    int64 `json:"pageSize"`    //每页数量
 	Current     int64 `json:"current"`     //当前页码
 	CurrentSize int64 `json:"currentSize"` //当前页数量
-	Status      int8  `json:"status"`      //订单状态：
+	Status      int  `json:"status"`      //订单状态：
 }
 
 type OrderValue struct {
@@ -23,10 +23,10 @@ type OrderValue struct {
 	Price       int64 `json:"price"`       // 单价
 	Num         int64 `json:"num"`         // 数量
 	TotalPrice  int64 `json:"totalPrice"`  // 总价
-	ProductType int8 `json:"productType"`  // 分类
+	ProductType int `json:"productType"`  // 分类
 	ProductId   int64 `json:"productId"`   // 分类
 	Brief       string `json:"brief"`      // 图片
-	Status      int8 `json:"status"`       // 状态
+	Status      int `json:"status"`       // 状态
 }
 
 type OrderDetailResponse struct {
@@ -38,7 +38,7 @@ type OrderDetailResponse struct {
 type OrderDetail struct {
 	Price      int64 `json:"price"`       // 单价
 	Num        int64 `json:"num"`         // 数量
-	Status     int8  `json:"status"`      // 订单状态
+	Status     int  `json:"status"`      // 订单状态
 }
 
 type OrderAddResponse struct {

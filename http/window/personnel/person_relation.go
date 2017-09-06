@@ -17,8 +17,8 @@ type PersonRelation struct {
 	CompanyId     int64 `json:"companyId"`     // 所有者ID
 	AssociationId int64 `json:"associationId"` // parent_id（关联人ID）
 	AssociatedId  int64 `json:"associatedId"`  // parent_id（被关联人ID）
-	Type          int8 `json:"type"`            // 类型
-	Status        int8 `json:"status"`          // 状态  1.关联   2.取消关联
+	Type          int `json:"type"`            // 类型
+	Status        int `json:"status"`          // 状态  1.关联   2.取消关联
 }
 
 type AddPersonRelationResponse struct {

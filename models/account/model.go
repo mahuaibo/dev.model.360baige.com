@@ -7,10 +7,10 @@ type Account struct {
 	CompanyId        int64    `db:"company_id" json:"companyId"`               // 所属公司ID
 	UserId           int64    `db:"user_id" json:"userId"`                     // 所有者id
 	UserPositionId   int64    `db:"user_position_id" json:"userPositionId"`    // 身份ID
-	UserPositionType int8     `db:"user_position_type" json:"userPositionType"` // 身份类型
-	Type             int8     `db:"type" json:"type"`                           // 类型:1.余额；2.积分;
+	UserPositionType int     `db:"user_position_type" json:"userPositionType"` // 身份类型
+	Type             int     `db:"type" json:"type"`                           // 类型:1.余额；2.积分;
 	Balance          int64    `db:"balance" json:"balance"`                    // 余额
-	Status           int8     `db:"status" json:"status"`                       // 状态 -1删除
+	Status           int     `db:"status" json:"status"`                       // 状态 -1删除
 }
 
 type AccountItem struct {
@@ -22,7 +22,7 @@ type AccountItem struct {
 	Amount        int64    `db:"amount" json:"amount"`                // 交易金额
 	Balance       int64    `db:"balance" json:"balance"`              // 平账
 	Remark        string    `db:"remark" json:"remark"`               // 备注
-	Status        int8    `db:"status" json:"status"`                 // 状态
+	Status        int    `db:"status" json:"status"`                  // 状态
 }
 
 type Transaction struct {
@@ -34,5 +34,5 @@ type Transaction struct {
 	Amount        int64    `db:"amount" json:"amount"`                 // 交易金额
 	OrderCode     string    `db:"order_code" json:"orderCode"`         // 订单编码
 	Remark        string    `db:"remark" json:"remark"`                // 备注
-	Status        int8      `db:"status" json:"status"`                  // 状态
+	Status        int      `db:"status" json:"status"`                 // 状态
 }
