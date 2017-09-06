@@ -46,6 +46,7 @@ func init() {
 	}
 	ListOfErrorSystem = map[int64]string{
 		40000: "请求参数错误",
+		40001: "请求数据错误",
 	}
 	ListOfErrorLogic = map[int64]string{
 		50000: "访问令牌验证服务异常",

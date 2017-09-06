@@ -35,23 +35,23 @@ type ApplicationTplList struct {
 }
 
 type ApplicationValue struct {
-	Id         int64 `json:"id"`          // 主键自动增长id apid
-	CreateTime string `json:"createTime"` // 创建时间ap
-	Name       string `json:"name"`       // 名称ap is null tpl
-	Image      string `json:"image"`      // 图片链接ap is null tpl
-	Status     int8 `json:"status"`       // 状态 0 启用 1停用
-	Site       string `json:"site"`       // 访问链接tpl
+	Id      int64 `json:"id"`       // 主键自动增长id apid
+	EndTime string `json:"endTime"` // 服务截止时间
+	Name    string `json:"name"`    // 名称ap is null tpl
+	Image   string `json:"image"`   // 图片链接ap is null tpl
+	Status  int8 `json:"status"`    // 状态 0 启用 1停用
+	Site    string `json:"site"`    // 访问链接tpl
 }
 
 type ApplicationTplValue struct {
-	Id                 int64 `json:"id"`           // 主键自动增长id aptplid
-	Name               string `json:"name"`        // 名称tpl
-	Image              string `json:"image"`       // 图片链接tpl
-	Desc               string `json:"desc"`        // 简介tpl
-	Price              int64 `json:"price"`        // 价格 tpl
-	PayCycle           int8 `json:"payCycle"`      // 0无1月2季3半年4年tpl
-	Subscription       int64 `json:"subscription"` // 订阅量
-	SubscriptionStatus int8 `json:"status"`        // 状态 0 未订阅 1 已订阅
+	Id                 int64 `json:"id"`                // 主键自动增长id aptplid
+	Name               string `json:"name"`             // 名称tpl
+	Image              string `json:"image"`            // 图片链接tpl
+	Desc               string `json:"desc"`             // 简介tpl
+	Price              int64 `json:"price"`             // 价格 tpl
+	PayCycle           int8 `json:"payCycle"`           // 0无1月2季3半年4年tpl
+	Subscription       int64 `json:"subscription"`      // 订阅量
+	SubscriptionStatus int8 `json:"subscriptionStatus"` // 状态 0 未订阅 1 已订阅
 }
 
 type ApplicationTalDetailResponse struct {
@@ -70,7 +70,6 @@ type ApplicationTalDetail struct {
 	Price              int64 `json:"price"`             // 价格
 	PayCycle           string `json:"payCycle"`         // 0无1月2季3半年4年
 	SubscriptionStatus int8 `json:"subscriptionStatus"` //
-	StartTime          string `json:"startTime"`        //
 	EndTime            string `json:"endTime"`          //
 }
 
