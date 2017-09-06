@@ -22,6 +22,7 @@ type UserDetail struct {
 	Username string `json:"username"` // 用户名
 	Email    string `json:"email"`    // 邮件
 	Phone    string `json:"phone"`    // 手机号
+	Head     string `json:"head"`     // 头像
 }
 
 type UserDetailResponse struct {
@@ -43,4 +44,10 @@ type ExistKeyResponse struct {
 type SendMessageCodeResponse struct {
 	Code    string `json:"code"`
 	Message string        `json:"message"`
+}
+
+type UploadHeadResponse struct {
+	Code    string `json:"code"`
+	Message string        `json:"message"`
+	Data    string   `json:"head"`
 }

@@ -25,3 +25,9 @@ type CompanyModifyResponse struct {
 	Message string        `json:"message"`
 	Data    CompanyDetail   `json:"data,omitempty"`
 }
+
+type UploadLogoResponse struct {
+	Code    string `json:"code"`
+	Message string        `json:"message"`
+	Data    string   `json:"head"`
+}
