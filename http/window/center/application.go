@@ -78,7 +78,7 @@ type ModifyApplicationStatusResponse struct {
 	Message string `json:"message"`
 }
 
-type ModifyApplicationTplStatusResponse struct {
+type SubscribeResponse struct {
 	Code    string `json:"code"`
 	Message string        `json:"message"`
 	Data    ApplicationTplStatus   `json:"data,omitempty"`
@@ -87,6 +87,11 @@ type ModifyApplicationTplStatusResponse struct {
 type ApplicationTplStatus struct {
 	AppId            int64 `json:"appId"`            //ap id
 	ApplicationTplId int64 `json:"applicationTplId"` // 应用ID
+}
+
+type UnSubscribeResponse struct {
+	Code    string `json:"code"`
+	Message string        `json:"message"`
 }
 
 func GetPayCycleName(ptype int) string {
