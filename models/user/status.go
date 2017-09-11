@@ -8,6 +8,9 @@ const (
 	UserPositionIdAudit        int64 = 100
 )
 
+// 默认头像
+const HEAD = "User/HeadImages/daeh1835905051.png"
+
 // 用户状态
 const (
 	UserStatusCancel int = -1
