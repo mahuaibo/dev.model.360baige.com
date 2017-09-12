@@ -8,6 +8,9 @@ const (
 	UserPositionIdAudit        int64 = 100
 )
 
+// 默认头像
+const HEAD = "User/HeadImages/daeh1835905051.png"
+
 // 用户状态
 const (
 	UserStatusCancel int = -1
@@ -26,3 +29,21 @@ const (
 	UserPositionTypeStudent int = 400 // 学生 400 ~ 500
 	UserPositionTypeVisitor int = 500 // 游客 500 ~ 600
 )
+
+func UserPositionName(UserPositionType int) string {
+	if UserPositionType == UserPositionTypeDev {
+		return "开发者"
+	} else if UserPositionType == UserPositionTypeAudit {
+		return "运营商"
+	} else if UserPositionType == UserPositionTypeService {
+		return "服务商"
+	} else if UserPositionType == UserPositionTypeSchool {
+		return "管理员"
+	} else if UserPositionType == UserPositionTypeStudent {
+		return "学生"
+	} else if UserPositionType == UserPositionTypeVisitor {
+		return "游客"
+	} else {
+		return "其他"
+	}
+}

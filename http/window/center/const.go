@@ -39,7 +39,7 @@ func Message(key int64, def ...string) (string) {
 
 func init() {
 	ListOfNormal = map[int64]string{
-		20000: "获取校园收费列表成功",
+		20000: "获取信息成功",
 		20001: "",
 	}
 	ListOfErrorPower = map[int64]string{

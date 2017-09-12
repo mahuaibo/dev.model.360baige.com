@@ -21,19 +21,3 @@ type UserPositionToken struct {
 	AccessToken string `json:"accessToken"` // 访问令牌
 	ExpireIn    int64 `json:"expireIn"`     // 访问时效
 }
-
-func UserPositionName(UserPositionType int) string {
-	if 0 <= UserPositionType && UserPositionType < 10 {
-		return "管理员"
-	} else if 10 <= UserPositionType && UserPositionType < 20 {
-		return "管理员"
-	} else if 20 <= UserPositionType && UserPositionType < 30 {
-		return "管理员"
-	} else if 30 <= UserPositionType && UserPositionType < 40 {
-		return "管理员"
-	} else if 40 <= UserPositionType && UserPositionType < 50 {
-		return "管理员"
-	} else {
-		return "管理员"
-	}
-}
