@@ -6,12 +6,23 @@ type UserLoginResponse struct {
 	Data    UserLogin   `json:"data,omitempty"`
 }
 
+type UserBindResponse struct {
+	Code    string `json:"code"`
+	Message string        `json:"message"`
+	Data    UserBind   `json:"data,omitempty"`
+}
+
+type UserBind struct {
+	OpenId string `json:"openId"` // 微信Id
+}
+
 type ModifyPasswordResponse struct {
 	Code    string `json:"code"`
 	Message string        `json:"message"`
 }
 
 type UserLogin struct {
+	Username     string `json:"username"`     // 用户名
 	Head         string `json:"head"`         // 头像
 	AccessTicket string `json:"accessTicket"` // 访问令牌
 	ExpireIn     int64 `json:"expireIn"`      // 访问时效

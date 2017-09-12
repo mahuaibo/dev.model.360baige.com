@@ -12,6 +12,7 @@ type User struct {
 	AccessTicket string    `db:"access_ticket" json:"accessTicket"` // 访问令牌
 	ExpireIn     int64    `db:"expire_in" json:"expireIn"`          // 访问时效
 	Status       int    `db:"status" json:"status"`                 // 状态 -1注销 0正常
+	WxOpenId     string `db:"wx_open_id" json:"wxOpenId"`           // 微信openId
 }
 
 type UserPosition struct {
