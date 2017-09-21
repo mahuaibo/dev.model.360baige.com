@@ -47,3 +47,10 @@ func UserPositionName(UserPositionType int) string {
 		return "其他"
 	}
 }
+
+// 用户时效
+const (
+	UserExpireIn                int64 = 60 * 1000
+	UserPositionExpireIn        int64 = 3600 * 1000 * 24 * 30
+	UserPositionTransitExpireIn int64 = UserPositionExpireIn / 2
+)
