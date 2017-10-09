@@ -7,13 +7,14 @@ type UserLoginResponse struct {
 }
 
 type UserBindResponse struct {
-	Code    string `json:"code"`
-	Message string        `json:"message"`
+	Code    string     `json:"code"`
+	Message string     `json:"message"`
 	Data    UserBind   `json:"data,omitempty"`
 }
 
 type UserBind struct {
-	OpenId string `json:"openId"` // 微信Id
+	OpenType int `json:"openType"`  // 第三方类型
+	OpenId   string `json:"openId"` // 第三方openId
 }
 
 type ModifyPasswordResponse struct {
