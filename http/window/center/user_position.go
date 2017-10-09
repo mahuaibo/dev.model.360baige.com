@@ -21,3 +21,8 @@ type UserPositionToken struct {
 	AccessToken string `json:"accessToken"` // 访问令牌
 	ExpireIn    int64 `json:"expireIn"`     // 访问时效
 }
+type ChangeAccessTokenResponse struct {
+	Code    string `json:"code"`
+	Message string        `json:"message"`
+	Data    UserPositionToken   `json:"data,omitempty"`
+}

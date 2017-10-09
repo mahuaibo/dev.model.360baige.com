@@ -1,7 +1,6 @@
 package user
 
 // 运营账号信息
-
 const (
 	UserPositionCompanyIdAudit int64 = 100
 	UserIdAudit                int64 = 100
@@ -27,7 +26,7 @@ const (
 	UserPositionTypeService int = 200 // 服务商 200 ~ 300
 	UserPositionTypeSchool  int = 300 // 管理员 300 ~ 400
 	UserPositionTypeStudent int = 400 // 学生 400 ~ 500
-	UserPositionTypeVisitor int = 500 // 游客 500 ~ 600
+	UserPositionTypeVisitor int = 500 // 大众 500 ~ 600
 )
 
 func UserPositionName(UserPositionType int) string {
@@ -42,8 +41,15 @@ func UserPositionName(UserPositionType int) string {
 	} else if UserPositionType == UserPositionTypeStudent {
 		return "学生"
 	} else if UserPositionType == UserPositionTypeVisitor {
-		return "游客"
+		return "大众"
 	} else {
 		return "其他"
 	}
 }
+
+// 用户时效
+const (
+	UserExpireIn                int64 = 60 * 1000
+	UserPositionExpireIn        int64 = 3600 * 1000 * 24 * 30
+	UserPositionTransitExpireIn int64 = UserPositionExpireIn / 2
+)
