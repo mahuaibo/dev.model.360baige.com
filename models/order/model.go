@@ -9,6 +9,7 @@ type Order struct {
 	UserPositionType int     `db:"user_position_type" json:"userPositionType"` // 身份类型
 	UserPositionId   int64    `db:"user_position_id" json:"userPositionId"`    // 身份ID
 	Code             string   `db:"code" json:"code"`                          // 订单编号
+	SubCode          string   `db:"sub_code" json:"subCode"`                   // 子订单编号
 	Price            int64    `db:"price" json:"price"`                        // 单价
 	Num              int64    `db:"num" json:"num"`                            // 数量
 	TotalPrice       int64    `db:"total_price" json:"totalPrice"`             // 总价

@@ -50,6 +50,7 @@ type OrderAddResponse struct {
 
 type OrderAdd struct {
 	Id      int64 `json:"id"`
+	PayType int `json:payType`
 	CodeUrl string  `json:"codeUrl"`
 }
 
