@@ -16,10 +16,10 @@ type Project struct {
 	UpdateTime int64 `json:"updateTime"` // 更新时间
 	CompanyId  int64 `json:"companyId"`  // 所属公司ID
 	Name       string `json:"name"`      // 项目名称
-	IsLimit    int `json:"isLimit"`     // 是否限制缴费
+	IsLimit    int `json:"isLimit"`      // 是否限制缴费
 	Desc       string `json:"desc"`      // 描述
 	Link       string `json:"link"`      // 描述链接
-	Status     int `json:"status"`      // 状态 -1注销 0正常
+	Status     int `json:"status"`       // 状态 -1注销 0正常
 }
 
 type SearchProjectInfoResponse struct {
@@ -75,9 +75,9 @@ type Record struct {
 	IdCard     string `json:"idCard"`    // 身份证号
 	Num        string `json:"num"`       // 编号
 	Phone      string `json:"phone"`     // 联系电话
-	Status     int `json:"status"`      // 状态 -1删除
+	Status     int `json:"status"`       // 状态 -1删除
 	Price      int64 `json:"price"`      // 应缴费用
-	IsFee      int `json:"isFee"`       // 是否缴费
+	IsFee      int `json:"isFee"`        // 是否缴费
 	FeeTime    int64 `json:"feeTime"`    // 缴费时间（毫秒）
 	Desc       string `json:"desc"`      // 备注
 }
@@ -93,10 +93,22 @@ type RecordProject struct {
 	IdCard     string `json:"idCard"`    // 身份证号
 	Num        string `json:"num"`       // 编号
 	Phone      string `json:"phone"`     // 联系电话
-	Status     int `json:"status"`      // 状态 -1删除
+	Status     int `json:"status"`       // 状态 -1删除
 	Price      int64 `json:"price"`      // 应缴费用
-	IsFee      int `json:"isFee"`       // 是否缴费
+	IsFee      int `json:"isFee"`        // 是否缴费
 	FeeTime    int64 `json:"feeTime"`    // 缴费时间（毫秒）
 	Desc       string `json:"desc"`      // 备注
 	Project    Project  `json:"project"`
+}
+
+type OrderAddResponse struct {
+	Code    string `json:"code"`
+	Message string `json:"message"`
+	Data    OrderAdd  `json:"data,omitempty"`
+}
+
+type OrderAdd struct {
+	Id      int64 `json:"id"`
+	PayType int `json:payType`
+	CodeUrl string  `json:"codeUrl"`
 }

@@ -39,6 +39,7 @@ type OrderDetail struct {
 	Price   int64 `json:"price"`     // 单价
 	Num     int64 `json:"num"`       // 数量
 	Status  int  `json:"status"`     // 订单状态
+	PayType int  `json:"pay_type"`   // 支付类型
 	CodeUrl string  `json:"codeUrl"` //
 }
 
